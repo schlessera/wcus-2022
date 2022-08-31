@@ -1,0 +1,81 @@
+.reveal .pattern-definition {
+  display: block;
+  width: 70%;
+  margin: 20px auto;
+  border: 3px solid #96a3a3;
+  border-radius: 15px;
+  padding: 5px 15px 8px 80px;
+  text-align: center;
+  font-weight: 700;
+  min-height: 65px;
+}
+
+.reveal .pattern-definition strong {
+  color: #4182ad;
+  font-weight: 900;
+}
+
+.reveal .pattern-definition::before {
+  font-family: "FontAwesome";
+  content: "\f05a";
+  position: absolute;
+  font-size: 60px;
+  left: 86px;
+  top: 104px;
+  color: #e37e32;
+}
+
+.reveal .business-requirement {
+  display: block;
+  width: 70%;
+  margin: 20px auto;
+  border: 3px solid #96a3a3;
+  border-radius: 15px;
+  padding: 5px 15px 8px 80px;
+  text-align: center;
+  font-weight: 700;
+  min-height: 65px;
+}
+
+.reveal .business-requirement::before {
+  font-family: "FontAwesome";
+  content: "\f059";
+  position: absolute;
+  font-size: 60px;
+  left: 86px;
+  top: 22px;
+  color: #e37e32;
+}
+
+.reveal .business-requirement--details p:first-child::before {
+  font-family: "FontAwesome";
+  content: "\f00c";
+  color: #55d055;
+}
+
+.reveal .exercise-goal {
+  font-size: 32px;
+  font-weight: 700;
+  text-align: center;
+  background-color: #4182ad;
+  color: white;
+  margin: 40px 40px 20px;
+  padding: 10px 10px 12px;
+  border-radius: 10px;
+}
+
+.reveal .exercise-branch {
+  text-align: center;
+  color: #4182ad;
+  font-size: 22px;
+  margin-bottom: 40px;
+}
+
+.reveal .exercise-branch code {
+  color: #4182ad;
+  background-color: #ffffff00;
+  padding: 0;
+  margin: 0;
+  vertical-align: text-bottom;
+  font-size: 19px;
+}

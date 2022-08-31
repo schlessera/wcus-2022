@@ -1,0 +1,1416 @@
+@font-face {
+    font-family: 'BNCode';
+    src: url('../../fonts/hasklig/hasklig.eot');
+    src: url('../../fonts/hasklig/hasklig.eot?#iefix') format('embedded-opentype'),
+    url('../../fonts/hasklig/hasklig.otf') format('opentype'),
+    url('../../fonts/hasklig/hasklig.woff') format('woff'),
+    url('../../fonts/hasklig/hasklig.ttf') format('truetype'),
+    url('../../fonts/hasklig/hasklig.svg#hasklig') format('svg');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'BNFont';
+    src: url('../../fonts/texta_black/Texta-Black-webfont.eot');
+    src: url('../../fonts/texta_black/Texta-Black-webfont.eot?#iefix') format('embedded-opentype'),
+    url('../../fonts/texta_black/Texta-Black-webfont.woff2') format('woff2'),
+    url('../../fonts/texta_black/Texta-Black-webfont.woff') format('woff'),
+    url('../../fonts/texta_black/Texta-Black-webfont.ttf') format('truetype'),
+    url('../../fonts/texta_black/Texta-Black-webfont.svg#textablack') format('svg');
+    font-weight: 900;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'BNFont';
+    src: url('../../fonts/texta_blackitalic/Texta-Black-Italic-webfont.eot');
+    src: url('../../fonts/texta_blackitalic/Texta-Black-Italic-webfont.eot?#iefix') format('embedded-opentype'),
+    url('../../fonts/texta_blackitalic/Texta-Black-Italic-webfont.woff2') format('woff2'),
+    url('../../fonts/texta_blackitalic/Texta-Black-Italic-webfont.woff') format('woff'),
+    url('../../fonts/texta_blackitalic/Texta-Black-Italic-webfont.ttf') format('truetype'),
+    url('../../fonts/texta_blackitalic/Texta-Black-Italic-webfont.svg#textablack_italic') format('svg');
+    font-weight: 900;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'BNFont';
+    src: url('../../fonts/texta_heavy/Texta-Heavy-webfont.eot');
+    src: url('../../fonts/texta_heavy/Texta-Heavy-webfont.eot?#iefix') format('embedded-opentype'),
+    url('../../fonts/texta_heavy/Texta-Heavy-webfont.woff2') format('woff2'),
+    url('../../fonts/texta_heavy/Texta-Heavy-webfont.woff') format('woff'),
+    url('../../fonts/texta_heavy/Texta-Heavy-webfont.ttf') format('truetype'),
+    url('../../fonts/texta_heavy/Texta-Heavy-webfont.svg#textaheavy') format('svg');
+    font-weight: 800;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'BNFont';
+    src: url('../../fonts/texta_heavyitalic/Texta-Heavy-Italic-webfont.eot');
+    src: url('../../fonts/texta_heavyitalic/Texta-Heavy-Italic-webfont.eot?#iefix') format('embedded-opentype'),
+    url('../../fonts/texta_heavyitalic/Texta-Heavy-Italic-webfont.woff2') format('woff2'),
+    url('../../fonts/texta_heavyitalic/Texta-Heavy-Italic-webfont.woff') format('woff'),
+    url('../../fonts/texta_heavyitalic/Texta-Heavy-Italic-webfont.ttf') format('truetype'),
+    url('../../fonts/texta_heavyitalic/Texta-Heavy-Italic-webfont.svg#textaheavy_italic') format('svg');
+    font-weight: 800;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'BNFont';
+    src: url('../../fonts/texta_bold/Texta-Bold-webfont.eot');
+    src: url('../../fonts/texta_bold/Texta-Bold-webfont.eot?#iefix') format('embedded-opentype'),
+    url('../../fonts/texta_bold/Texta-Bold-webfont.woff2') format('woff2'),
+    url('../../fonts/texta_bold/Texta-Bold-webfont.woff') format('woff'),
+    url('../../fonts/texta_bold/Texta-Bold-webfont.ttf') format('truetype'),
+    url('../../fonts/texta_bold/Texta-Bold-webfont.svg#textabold') format('svg');
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'BNFont';
+    src: url('../../fonts/texta_bolditalic/Texta-Bold-Italic-webfont.eot');
+    src: url('../../fonts/texta_bolditalic/Texta-Bold-Italic-webfont.eot?#iefix') format('embedded-opentype'),
+    url('../../fonts/texta_bolditalic/Texta-Bold-Italic-webfont.woff2') format('woff2'),
+    url('../../fonts/texta_bolditalic/Texta-Bold-Italic-webfont.woff') format('woff'),
+    url('../../fonts/texta_bolditalic/Texta-Bold-Italic-webfont.ttf') format('truetype'),
+    url('../../fonts/texta_bolditalic/Texta-Bold-Italic-webfont.svg#textabold_italic') format('svg');
+    font-weight: 700;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'BNFont';
+    src: url('../../fonts/texta_medium/Texta-Medium-webfont.eot');
+    src: url('../../fonts/texta_medium/Texta-Medium-webfont.eot?#iefix') format('embedded-opentype'),
+    url('../../fonts/texta_medium/Texta-Medium-webfont.woff2') format('woff2'),
+    url('../../fonts/texta_medium/Texta-Medium-webfont.woff') format('woff'),
+    url('../../fonts/texta_medium/Texta-Medium-webfont.ttf') format('truetype'),
+    url('../../fonts/texta_medium/Texta-Medium-webfont.svg#textamedium') format('svg');
+    font-weight: 600;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'BNFont';
+    src: url('../../fonts/texta_mediumitalic/Texta-Medium-Italic-webfont.eot');
+    src: url('../../fonts/texta_mediumitalic/Texta-Medium-Italic-webfont.eot?#iefix') format('embedded-opentype'),
+    url('../../fonts/texta_mediumitalic/Texta-Medium-Italic-webfont.woff2') format('woff2'),
+    url('../../fonts/texta_mediumitalic/Texta-Medium-Italic-webfont.woff') format('woff'),
+    url('../../fonts/texta_mediumitalic/Texta-Medium-Italic-webfont.ttf') format('truetype'),
+    url('../../fonts/texta_mediumitalic/Texta-Medium-Italic-webfont.svg#textamedium_italic') format('svg');
+    font-weight: 600;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'BNFont';
+    src: url('../../fonts/texta_regular/Texta-Regular-webfont.eot');
+    src: url('../../fonts/texta_regular/Texta-Regular-webfont.eot?#iefix') format('embedded-opentype'),
+    url('../../fonts/texta_regular/Texta-Regular-webfont.woff2') format('woff2'),
+    url('../../fonts/texta_regular/Texta-Regular-webfont.woff') format('woff'),
+    url('../../fonts/texta_regular/Texta-Regular-webfont.ttf') format('truetype'),
+    url('../../fonts/texta_regular/Texta-Regular-webfont.svg#textaregular') format('svg');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'BNFont';
+    src: url('../../fonts/texta_italic/Texta-Italic-webfont.eot');
+    src: url('../../fonts/texta_italic/Texta-Italic-webfont.eot?#iefix') format('embedded-opentype'),
+    url('../../fonts/texta_italic/Texta-Italic-webfont.woff2') format('woff2'),
+    url('../../fonts/texta_italic/Texta-Italic-webfont.woff') format('woff'),
+    url('../../fonts/texta_italic/Texta-Italic-webfont.ttf') format('truetype'),
+    url('../../fonts/texta_italic/Texta-Italic-webfont.svg#textaitalic') format('svg');
+    font-weight: 400;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'BNFont';
+    src: url('../../fonts/texta_book/Texta-Book-webfont.eot');
+    src: url('../../fonts/texta_book/Texta-Book-webfont.eot?#iefix') format('embedded-opentype'),
+    url('../../fonts/texta_book/Texta-Book-webfont.woff2') format('woff2'),
+    url('../../fonts/texta_book/Texta-Book-webfont.woff') format('woff'),
+    url('../../fonts/texta_book/Texta-Book-webfont.ttf') format('truetype'),
+    url('../../fonts/texta_book/Texta-Book-webfont.svg#textabook') format('svg');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'BNFont';
+    src: url('../../fonts/texta_bookitalic/Texta-Book-Italic-webfont.eot');
+    src: url('../../fonts/texta_bookitalic/Texta-Book-Italic-webfont.eot?#iefix') format('embedded-opentype'),
+    url('../../fonts/texta_bookitalic/Texta-Book-Italic-webfont.woff2') format('woff2'),
+    url('../../fonts/texta_bookitalic/Texta-Book-Italic-webfont.woff') format('woff'),
+    url('../../fonts/texta_bookitalic/Texta-Book-Italic-webfont.ttf') format('truetype'),
+    url('../../fonts/texta_bookitalic/Texta-Book-Italic-webfont.svg#textabook_italic') format('svg');
+    font-weight: 300;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'BNFont';
+    src: url('../../fonts/texta_light/Texta-Light-webfont.eot');
+    src: url('../../fonts/texta_light/Texta-Light-webfont.eot?#iefix') format('embedded-opentype'),
+    url('../../fonts/texta_light/Texta-Light-webfont.woff2') format('woff2'),
+    url('../../fonts/texta_light/Texta-Light-webfont.woff') format('woff'),
+    url('../../fonts/texta_light/Texta-Light-webfont.ttf') format('truetype'),
+    url('../../fonts/texta_light/Texta-Light-webfont.svg#textalight') format('svg');
+    font-weight: 200;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'BNFont';
+    src: url('../../fonts/texta_lightitalic/Texta-Light-Italic-webfont.eot');
+    src: url('../../fonts/texta_lightitalic/Texta-Light-Italic-webfont.eot?#iefix') format('embedded-opentype'),
+    url('../../fonts/texta_lightitalic/Texta-Light-Italic-webfont.woff2') format('woff2'),
+    url('../../fonts/texta_lightitalic/Texta-Light-Italic-webfont.woff') format('woff'),
+    url('../../fonts/texta_lightitalic/Texta-Light-Italic-webfont.ttf') format('truetype'),
+    url('../../fonts/texta_lightitalic/Texta-Light-Italic-webfont.svg#textalight_italic') format('svg');
+    font-weight: 200;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'BNFont';
+    src: url('../../fonts/texta_thin/Texta-Thin-webfont.eot');
+    src: url('../../fonts/texta_thin/Texta-Thin-webfont.eot?#iefix') format('embedded-opentype'),
+    url('../../fonts/texta_thin/Texta-Thin-webfont.woff2') format('woff2'),
+    url('../../fonts/texta_thin/Texta-Thin-webfont.woff') format('woff'),
+    url('../../fonts/texta_thin/Texta-Thin-webfont.ttf') format('truetype'),
+    url('../../fonts/texta_thin/Texta-Thin-webfont.svg#textathin') format('svg');
+    font-weight: 100;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'BNFont';
+    src: url('../../fonts/texta_thinitalic/Texta-Thin-Italic-webfont.eot');
+    src: url('../../fonts/texta_thinitalic/Texta-Thin-Italic-webfont.eot?#iefix') format('embedded-opentype'),
+    url('../../fonts/texta_thinitalic/Texta-Thin-Italic-webfont.woff2') format('woff2'),
+    url('../../fonts/texta_thinitalic/Texta-Thin-Italic-webfont.woff') format('woff'),
+    url('../../fonts/texta_thinitalic/Texta-Thin-Italic-webfont.ttf') format('truetype'),
+    url('../../fonts/texta_thinitalic/Texta-Thin-Italic-webfont.svg#textathin_italic') format('svg');
+    font-weight: 100;
+    font-style: italic;
+}
+
+/*********************************************
+ * GLOBAL STYLES
+ *********************************************/
+body {
+    background: #ffffff;
+    background-color: #ffffff;
+}
+
+.reveal {
+    font-family: 'BNFont', sans-serif;
+    font-size: 26px;
+    font-weight: 500;
+    color: #2d3232;
+}
+
+::selection {
+    color: #fff;
+    background: #e67e22;
+    text-shadow: none;
+}
+
+.reveal .slides > section,
+.reveal .slides > section > section {
+    line-height: 1.3;
+    font-weight: inherit;
+    padding: 0;
+}
+
+.monospace {
+    font-family: 'BNCode', monospace !important;
+    font-size: 90% !important;
+}
+
+/*********************************************
+ * HEADERS
+ *********************************************/
+.reveal h1,
+.reveal h2,
+.reveal h3,
+.reveal h4,
+.reveal h5,
+.reveal h6 {
+    margin: 0 0 0.125em 0;
+    color: #d35400;
+    font-family: 'BNFont', serif;
+    font-weight: 800;
+    line-height: 1.2;
+    letter-spacing: normal;
+    word-wrap: break-word;
+    text-align: center;
+    vertical-align: bottom;
+}
+
+.reveal h1 {
+    font-weight: 900;
+    font-family: 'BNFont', sans-serif;
+    font-size: 2.5em;
+    margin-bottom: 0.5em;
+}
+
+.reveal h1 small {
+    color: #2d3232;
+    vertical-align: bottom;
+}
+
+.reveal h2 small {
+    opacity: 0.5;
+    font-weight: 100;
+    font-size: inherit;
+    vertical-align: bottom;
+}
+
+.reveal h2 {
+    font-size: 1.8em;
+    color: inherit;
+    margin-top: 0.5em;
+    margin-bottom: 0.25em;
+}
+
+.reveal h2 strong {
+    font-weight: 900;
+}
+
+.reveal h3 {
+    font-size: 1.55em;
+    margin-top: 0.8em;
+}
+
+.reveal h4 {
+    font-size: 1em;
+}
+
+/*********************************************
+ * OTHER
+ *********************************************/
+.reveal p {
+    margin: 20px 0;
+    line-height: 1.3;
+}
+
+.reveal ol > li > p,
+.reveal ul > li > p {
+    display: inline;
+}
+
+.reveal ol > li > p:after,
+.reveal ul > li > p:after {
+    content: "\A";
+    white-space: pre;
+}
+
+/* Ensure certain elements are never larger than the slide itself */
+.reveal img,
+.reveal video,
+.reveal iframe {
+    max-width: 95%;
+    max-height: 95%;
+}
+
+.reveal strong,
+.reveal b {
+    font-weight: bold;
+}
+
+.reveal em {
+    font-style: italic;
+}
+
+.reveal ol,
+.reveal dl,
+.reveal ul {
+    display: inline-block;
+    text-align: left;
+    margin: 0 0 0 1em;
+}
+
+.reveal ol {
+    list-style-type: decimal;
+}
+
+.reveal ul {
+    list-style-type: disc;
+}
+
+.reveal ul ul {
+    list-style-type: square;
+}
+
+.reveal ul ul ul {
+    list-style-type: circle;
+}
+
+.reveal ul ul,
+.reveal ul ol,
+.reveal ol ol,
+.reveal ol ul {
+    display: block;
+    margin-left: 40px;
+}
+
+.reveal dt {
+    font-weight: bold;
+}
+
+.reveal dd {
+    margin-left: 40px;
+}
+
+.reveal q,
+.reveal blockquote {
+    quotes: none;
+}
+
+.reveal blockquote {
+    display: block;
+    position: relative;
+    width: 70%;
+    margin: 20px auto;
+    padding: 5px;
+    font-style: italic;
+    background: rgba(255, 255, 255, 0.05);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.45);
+}
+
+.reveal q {
+    font-style: italic;
+}
+
+.reveal pre {
+    display: block;
+    position: relative;
+    width: 90%;
+    margin: 20px auto;
+    text-align: left;
+    font-size: 20px;
+    font-family: 'BNCode', monospace !important;
+    font-weight: 700;
+    line-height: 1.2em;
+    word-wrap: break-word;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.45);
+}
+
+.reveal code {
+    font-family: 'BNCode', monospace !important;
+    font-weight: 700;
+    font-size: 18px;
+    vertical-align: 6%;
+}
+
+.reveal pre code {
+    display: block;
+    padding: 5px;
+    overflow: auto;
+    max-height: 400px;
+    word-wrap: normal;
+}
+
+.reveal table {
+    margin: auto;
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+.reveal table th {
+    font-weight: bold;
+}
+
+.reveal table th,
+.reveal table td {
+    text-align: left;
+    padding: 0.2em 0.5em 0.2em 0.5em;
+    border-bottom: 1px solid;
+}
+
+.reveal table th[align="center"],
+.reveal table td[align="center"] {
+    text-align: center;
+}
+
+.reveal table th[align="right"],
+.reveal table td[align="right"] {
+    text-align: right;
+}
+
+.reveal table tbody tr:last-child th,
+.reveal table tbody tr:last-child td {
+    border-bottom: none;
+}
+
+.reveal sup {
+    vertical-align: super;
+}
+
+.reveal sub {
+    vertical-align: sub;
+}
+
+.reveal small {
+    font-weight: 100;
+    opacity: 0.5;
+}
+
+.reveal small * {
+    vertical-align: top;
+}
+
+.reveal .centered {
+    text-align: center;
+}
+
+/*********************************************
+ * LINKS
+ *********************************************/
+.reveal a {
+    color: #d35400;
+    font-weight: bold;
+    text-decoration: none;
+    -webkit-transition: color .15s ease;
+    -moz-transition: color .15s ease;
+    transition: color .15s ease;
+}
+
+.reveal a:hover {
+    color: #e67e22;
+    text-shadow: none;
+    border: none;
+}
+
+.reveal .roll span:after {
+    color: #fff;
+    background: #d35e00;
+}
+
+/*********************************************
+ * IMAGES
+ *********************************************/
+.reveal section img {
+    margin: 15px auto;
+    background: rgba(255, 255, 255, 0.12);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.45);
+    display: block;
+}
+
+.reveal section img.plain {
+    border: 0;
+    box-shadow: none;
+}
+
+.reveal section img.scale-height {
+    width: auto;
+    height: 570px;
+}
+
+.reveal a img {
+    -webkit-transition: all .15s linear;
+    -moz-transition: all .15s linear;
+    transition: all .15s linear;
+}
+
+.reveal a:hover img {
+    background: rgba(255, 255, 255, 0.2);
+    border-color: #d35400;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.55);
+}
+
+/*********************************************
+ * NAVIGATION CONTROLS
+ *********************************************/
+.reveal .controls .navigate-left,
+.reveal .controls .navigate-left.enabled {
+    border-right-color: #d35400;
+}
+
+.reveal .controls .navigate-right,
+.reveal .controls .navigate-right.enabled {
+    border-left-color: #d35400;
+}
+
+.reveal .controls .navigate-up,
+.reveal .controls .navigate-up.enabled {
+    border-bottom-color: #d35400;
+}
+
+.reveal .controls .navigate-down,
+.reveal .controls .navigate-down.enabled {
+    border-top-color: #d35400;
+}
+
+.reveal .controls .navigate-left.enabled:hover {
+    border-right-color: #fabebc;
+}
+
+.reveal .controls .navigate-right.enabled:hover {
+    border-left-color: #fabebc;
+}
+
+.reveal .controls .navigate-up.enabled:hover {
+    border-bottom-color: #fabebc;
+}
+
+.reveal .controls .navigate-down.enabled:hover {
+    border-top-color: #fabebc;
+}
+
+/*********************************************
+ * PROGRESS BAR
+ *********************************************/
+.reveal .progress {
+    background: rgba(0, 0, 0, 0.2);
+}
+
+.reveal .progress span {
+    background: #d35400;
+    -webkit-transition: width 800ms cubic-bezier(0.26, 0.86, 0.44, 0.985);
+    -moz-transition: width 800ms cubic-bezier(0.26, 0.86, 0.44, 0.985);
+    transition: width 800ms cubic-bezier(0.26, 0.86, 0.44, 0.985);
+}
+
+body {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.reveal .slides {
+    text-align: left;
+}
+
+.reveal .slides section {
+    line-height: 1.5;
+}
+
+.reveal ol,
+.reveal ul {
+    margin: 0 auto;
+    max-width: 100%;
+    display: table;
+}
+
+.reveal ul li {
+    list-style-type: none;
+    padding-left: 1.5em;
+    padding-right: 2.5em;
+    display: table;
+}
+
+.reveal ul.somewhat-compact li {
+    padding-left: 2em;
+    padding-right: 2.5em;
+}
+
+.reveal ul.compact li {
+    padding-left: 1em;
+    padding-right: 1.5em;
+}
+
+.reveal ul.compacter li,
+.reveal ul.compact-extended li {
+    padding-left: 0.5em;
+    padding-right: 1em;
+}
+
+.reveal ul.compact-extended-2 li {
+    padding-left: 0;
+    padding-right: 0em;
+}
+
+.reveal ul li p:first-child::before {
+    font-family: 'BNCode', monospaced !important;
+    content: "::";
+    color: rgba(230, 126, 34, 0.75);
+    display: inline-block;
+    margin-left: -2em;
+    margin-right: .75em;
+}
+
+.reveal li {
+    padding-top: 0.3em;
+    padding-bottom: 0.3em;
+}
+
+.reveal ul.compact > li {
+    padding-top: 0.1em;
+    padding-bottom: 0.1em;
+}
+
+.reveal ul.compacter > li {
+    padding-top: 0.1em;
+    padding-bottom: 0.1em;
+    line-height: 1.3;
+}
+
+.reveal ul.compactest > li {
+    padding-top: 0;
+    padding-bottom: 0;
+    line-height: 0.8;
+}
+
+.reveal p.somewhat-compact {
+    line-height: 1.2;
+}
+
+.reveal p.compact {
+    line-height: 1.1;
+}
+
+.reveal p.compacter {
+    line-height: 1;
+}
+
+.reveal p.compactest {
+    line-height: 0.9;
+}
+
+.reveal code {
+    background-color: #ddd;
+    color: #000;
+    border-radius: 3px;
+    display: inline-block;
+    font-family: 'BNCode', monospace !important;
+    padding-left: .4em;
+    padding-right: .4em;
+}
+
+.reveal pre {
+    font-size: .75em;
+    line-height: 1.7;
+    width: 100%;
+    border: 1px solid #222626;
+    border-radius: 4px;
+}
+
+.reveal pre code {
+    color: #bfc9ca;
+}
+
+.reveal pre::before {
+    background-color: #bfc9ca;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+    color: #7f8c8d;
+    content: "•••";
+    display: block;
+    font-size: 1em;
+    line-height: 1.2;
+    text-indent: .5em;
+    width: 100%;
+}
+
+.reveal pre code {
+    background-color: #222626;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    max-height: 600px;
+    padding: 10px 15px;
+}
+
+.reveal small code {
+    vertical-align: baseline;
+}
+
+.reveal .slide-intro h1 {
+    font-size: 3em;
+    font-weight: 400;
+}
+
+.reveal .slide-intro img {
+    background: none;
+    border: 0;
+    box-shadow: none;
+    margin-bottom: 50px;
+    max-width: 100px;
+}
+
+code::-webkit-scrollbar {
+    background-color: #7f8c8d;
+    width: .3em;
+}
+
+code::-webkit-scrollbar-thumb {
+    background-color: #d35400;
+    border-radius: .2em;
+}
+
+.reveal ol li p,
+.reveal ul li p {
+    font-weight: 300;
+}
+
+.reveal ol li p:first-child,
+.reveal ul li p:first-child {
+    font-weight: 700;
+}
+
+.reveal ol li p:first-child strong,
+.reveal ul li p:first-child strong {
+    font-weight: 900;
+}
+
+.reveal ul li p.fragment:first-child::before {
+    opacity: 0;
+    visibility: hidden;
+    -webkit-transition: all .2s ease;
+    transition: all .2s ease;
+}
+
+.reveal ul li p.fragment.visible:first-child::before {
+    opacity: 1;
+    visibility: inherit;
+    -webkit-transition: all .2s ease;
+    transition: all .2s ease;
+}
+
+.reveal i.fragment.fa-check-square-o {
+    width: 15px;
+    opacity: 1;
+    visibility: inherit;
+}
+
+.reveal i.fragment.fa-check-square-o:before {
+    content: "\f096";
+}
+
+.reveal i.fragment.visible.fa-check-square-o:before {
+    content: "\f046";
+    color: #219452;
+}
+
+.reveal i.fragment.visible.fa-check-square-o.wip:before {
+    content: "\f046";
+    color: #cf850f;
+}
+
+.reveal ol.goals {
+    font-size: 24px;
+}
+
+.reveal ol li .needs {
+    font-weight: 300;
+}
+
+.reveal ol.goals li {
+    padding-top: 0;
+    padding-bottom: 0;
+    line-height: 1.1;
+}
+
+.reveal ol.goals p {
+    margin: 0;
+    line-height: 1.1;
+}
+
+.reveal ol p.goal {
+    margin: 10px 0;
+    line-height: 1;
+    color: #d35400;
+}
+
+.reveal .goals-met p {
+    display: inline-block;
+    margin-bottom: 5px;
+}
+
+.reveal .media {
+    margin: 10px;
+}
+
+.reveal .media, .bd {
+    display: table-cell;
+    width: 10000px;
+    *width: auto;
+    *zoom: 1;
+}
+
+.reveal .media .img {
+    float: left;
+    margin-right: 45px;
+}
+
+.reveal .media .img img {
+    display: block;
+}
+
+.reveal .media .imgExt {
+    float: right;
+    margin-left: 10px;
+}
+
+.reveal p.footnote,
+.reveal div.footnote {
+    font-weight: 300;
+    font-size: 90%;
+    opacity: 0.5;
+}
+
+.reveal .footnote.asterisk {
+    opacity: 0.5;
+}
+
+.reveal .interstitial p,
+.reveal .interstitial h1,
+.reveal .interstitial h2,
+.reveal .interstitial h3,
+.reveal .interstitial small {
+    line-height: 1.1;
+    color: #ffffff !important;
+    text-shadow: 2px 0 10px #d35400, -2px 0 10px #d35400, 0 2px 10px #d35400, 0 -2px 10px #d35400;
+}
+
+.reveal .interstitial h1 {
+    padding-top: 5%;
+    padding-bottom: 10%;
+}
+
+.reveal .interstitial h1:nth-of-type(2) {
+    padding-top: 80px;
+    margin-bottom: 20px;
+}
+
+.reveal .interstitial small,
+.reveal .interstitial small a {
+    opacity: 1;
+    font-size: 40px;
+    vertical-align: top;
+    font-weight: 400;
+}
+
+.reveal section.goals-met {
+    height: 550px;
+}
+
+.reveal section.full-height {
+    height: 600px;
+}
+
+.reveal mark.fragment,
+.reveal mark.fragment.visible {
+    opacity: 1 !important;
+    visibility: inherit !important;
+    color: inherit;
+    background-color: inherit;
+    font-weight: inherit;
+    border: none;
+    z-index: -1;
+    -webkit-transition: all .2s ease;
+    transition: all .2s ease;
+}
+
+.reveal mark.fragment.visible.current-fragment {
+    position: relative;
+    font-weight: bold;
+    z-index: 1;
+    -webkit-transition: all .2s ease;
+    transition: all .2s ease;
+}
+
+.reveal mark.fragment.visible.current-fragment::after {
+    position: absolute;
+    content: "\a";
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 2;
+    box-shadow: #d2d9da 0 0 6px 1px, #d2d9da 0 0 6px 1px;
+    -webkit-transition: all .2s ease;
+    transition: all .2s ease;
+    border-radius: 5px;
+    margin: -1px;
+}
+
+.reveal .half-left {
+    display: inline-block;
+    width: 49%;
+    padding-right: 5px;
+    vertical-align: top;
+}
+
+.reveal .half-right {
+    display: inline-block;
+    width: 49%;
+    padding-left: 5px;
+    vertical-align: top;
+}
+
+.reveal .push-right-1 .half-left {
+    width: 53%;
+}
+
+.reveal .push-right-1 .half-right {
+    width: 45%;
+}
+
+.reveal .push-right-2 .half-left {
+    width: 57%;
+}
+
+.reveal .push-right-2 .half-right {
+    width: 41%;
+}
+
+.reveal .push-left-1 .half-left {
+    width: 45%;
+}
+
+.reveal .push-left-1 .half-right {
+    width: 53%;
+}
+
+.reveal .push-left-2 .half-left {
+    width: 41%;
+}
+
+.reveal .push-left-2 .half-right {
+    width: 57%;
+}
+
+.reveal .no-scroll code {
+  overflow: hidden;
+}
+
+.reveal .row.somewhat-compact code {
+    font-size: 13px;
+    padding-bottom: 1px;
+    padding-top: 1px;
+}
+
+.reveal .row.compact code {
+    font-size: 12px;
+    padding-bottom: 1px;
+    padding-top: 1px;
+}
+
+.reveal .row.compacter code {
+    font-size: 11px;
+}
+
+.reveal .row.somewhat-compact p {
+    font-size: 18px;
+}
+
+.reveal .row.compact p {
+    font-size: 18px;
+}
+
+.reveal .row.compacter p {
+    font-size: 16px;
+}
+
+.reveal .row.somewhat-compact pre {
+    margin: 12px auto;
+}
+
+.reveal .row.compact pre {
+    margin: 8px auto;
+}
+
+.reveal .row.compacter pre {
+    margin: 6px auto;
+}
+
+.reveal .row.compact pre:before {
+    line-height: 1.1;
+    font-size: 0.8em;
+}
+
+.reveal .row.compacter pre:before {
+    line-height: 1.0;
+    font-size: 0.6em;
+}
+
+.reveal .arrow-from-top,
+.reveal .arrow-from-left,
+.reveal .arrow-from-right {
+    position: relative;
+}
+
+.reveal .arrow-from-top::before,
+.reveal .arrow-from-left::before,
+.reveal .arrow-from-right::before {
+    font-family: "FontAwesome";
+    position: absolute;
+    font-size: 16px;
+}
+
+.reveal .arrow-from-top::before {
+    content: "\f078";
+    top: -13px;
+    left: 49%;
+}
+
+.reveal .arrow-from-left::before {
+    content: "\f054";
+    top: 40%;
+    left: -7px;
+}
+
+.reveal .arrow-from-right::before {
+    content: "\f053";
+    top: 40%;
+    right: -8px;
+}
+
+.reveal .row.lane-title {
+    padding: 0;
+    margin: 0;
+    line-height: 1;
+}
+
+.reveal .row.lane-title .half-left h3,
+.reveal .row.lane-title .half-right h3 {
+    color: rgba(0, 0, 0, 0.3);
+    font-size: 16px;
+    padding: 0;
+    margin: 0;
+    line-height: 1;
+}
+
+.reveal .lanes .row .half-left {
+}
+
+.reveal .lanes .row .half-right {
+}
+
+.reveal .positive {
+    color: #1caa60;
+}
+
+.reveal .negative {
+    color: #e06c75;
+}
+
+.reveal img.compact,
+.reveal img.compacter {
+    margin: 0;
+}
+
+.reveal .highlight-letter {
+    font-weight: 800;
+    text-decoration: underline;
+}
+
+.reveal .center {
+    text-align: center;
+}
+
+.reveal .argument-definitions .argument {
+    width: 200px;
+    margin-right: 1em;
+    display: inline-block;
+}
+
+.reveal .argument-definitions.compact .argument {
+    width: 270px;
+    margin-right: 0.5em;
+}
+
+.reveal .argument-definitions.compact-extended .argument {
+    width: 320px;
+    margin-right: 0.5em;
+}
+
+.reveal .argument-definitions.compact .argument,
+.reveal .argument-definitions.compact .argument code,
+.reveal .argument-definitions.compact-extended .argument,
+.reveal .argument-definitions.compact-extended .argument code,
+.reveal .argument-definitions.compact-extended-2 .argument,
+.reveal .argument-definitions.compact-extended-2 .argument code,
+.reveal .argument-definitions.compactest .argument,
+.reveal .argument-definitions.compactest .argument code {
+    font-size: 60%;
+    vertical-align: top;
+}
+
+.reveal .argument-definitions.compact .definition,
+.reveal .argument-definitions.compact .definition code,
+.reveal .argument-definitions.compact-extended .definition,
+.reveal .argument-definitions.compact-extended .definition code,
+.reveal .argument-definitions.compactest .definition,
+.reveal .argument-definitions.compactest .definition code {
+    font-size: 60%;
+    vertical-align: top;
+}
+
+.reveal .argument-definitions.compact-extended-2 .definition,
+.reveal .argument-definitions.compact-extended-2 .definition code {
+    font-size: 50%;
+    vertical-align: top;
+}
+
+.reveal .half-left .argument-definitions .argument,
+.reveal .half-right .argument-definitions .argument {
+    width: 45px;
+    margin-right: 0.5em;
+    display: inline-block;
+    font-size: 65%;
+}
+
+.reveal .half-left .argument-definitions code,
+.reveal .half-right .argument-definitions code {
+    padding: 0.25em 0.4em;
+}
+
+.reveal .half-left .argument-definitions .definition,
+.reveal .half-right .argument-definitions .definition {
+    display: inline-block;
+    width: 80px;
+}
+
+.reveal .half-left .argument-definitions.compact-extended .argument,
+.reveal .half-right .argument-definitions.compact-extended .argument {
+    width: 120px;
+    margin-right: 0.3em;
+}
+
+.reveal .half-left .argument-definitions.compact-extended .definition,
+.reveal .half-right .argument-definitions.compact-extended .definition {
+    width: 225px;
+    display: inline-block;
+}
+
+.reveal .half-left .argument-definitions.compact-extended-2 .argument,
+.reveal .half-right .argument-definitions.compact-extended-2 .argument {
+    width: 200px;
+    margin-right: 0;
+}
+
+.reveal .half-left .argument-definitions.compact-extended-2 .definition,
+.reveal .half-right .argument-definitions.compact-extended-2 .definition {
+    width: 191px;
+    display: inline-block;
+}
+
+.reveal .half-left .argument-definitions .argument code,
+.reveal .half-left .argument-definitions .definition,
+.reveal .half-right .argument-definitions .argument code,
+.reveal .half-right .argument-definitions .definition {
+    margin-bottom: 0.7em;
+}
+
+.reveal .half-left .argument-definitions.compact-extended-2 .argument code,
+.reveal .half-left .argument-definitions.compact-extended-2 .definition,
+.reveal .half-right .argument-definitions.compact-extended-2 .argument code,
+.reveal .half-right .argument-definitions.compact-extended-2 .definition {
+    margin-bottom: 0.4em;
+}
+
+.reveal .half-left .argument-definitions li,
+.reveal .half-right .argument-definitions li {
+    padding-bottom: 0;
+}
+
+.reveal .blinking {
+    animation-name: blink;
+    animation-duration: 0.5s;
+    animation-timing-function: ease-out;
+    animation-delay: 0s;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+    animation-fill-mode: none;
+    animation-play-state: running;
+}
+
+@keyframes blink {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.reveal .hint {
+    padding-left: 0.5em;
+    opacity: 0.3;
+    font-size: 50%;
+}
+
+.reveal img.pipe {
+    box-shadow: none;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.reveal .pipe-intersection {
+    position: relative;
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+    width: 2em;
+    height: 5em;
+}
+
+.reveal .pipe-container {
+    position: relative;
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+    width: 10em;
+    height: 5em;
+}
+
+.reveal .pipe-input,
+.reveal .pipe-output {
+    position: relative;
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+    width: 5em;
+    height: 5em;
+}
+
+.reveal .pipe-description {
+    font-family: 'BNCode', monospace !important;
+    font-weight: 600;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    left: 50%;
+    top: 0;
+    transform: translate(-50%, -100%);
+}
+
+.reveal .pipe-text,
+.reveal .pipe-input-text,
+.reveal .pipe-between-text,
+.reveal .pipe-output-text {
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.reveal .pipe-text {
+    font-family: 'BNCode', monospace !important;
+    font-size: 50px;
+    font-weight: 600;
+    color: #000000;
+    text-shadow: 1px 1px #ffffff;
+    opacity: 0.5;
+}
+
+.reveal .pipe-between-text {
+    font-size: 50px;
+    color: forestgreen;
+}
+
+.reveal .pipe-input-text,
+.reveal .pipe-output-text {
+    font-size: 40px;
+    font-weight: 600;
+}
+
+.reveal .substitution-container-1,
+.reveal .substitution-container-2 {
+    display: inline-block;
+    padding: 2px 0 1px;
+}
+
+.reveal .substitution-outer {
+    padding: 2px 0 2px;
+}
+
+.reveal .fragment.visible .substitution-container-1 code,
+.reveal .fragment.visible .substitution-container-2 code,
+.reveal .substitution-container-1.fragment.visible code,
+.reveal .substitution-container-2.fragment.visible code {
+    background-color: inherit;
+    color: black;
+}
+
+.reveal .substitution-container-1.fragment,
+.reveal .substitution-container-2.fragment {
+    border: 3px solid white;
+    background-color: white;
+}
+
+.reveal .fragment.visible .substitution-container-1,
+.reveal .substitution-container-1.fragment.visible {
+    border: 3px solid rgb( 0, 140, 50 );
+    background-color: rgb( 0, 200, 100 );
+}
+
+.reveal .fragment.visible .substitution-container-2,
+.reveal .substitution-container-2.fragment.visible {
+    border: 3px solid rgb( 20, 100, 180 );
+    background-color: rgb( 30, 180, 240 );
+}
+
+.reveal mark.fragment,
+.reveal mark.fragment.visible,
+.reveal .substitution-container-1.fragment,
+.reveal .substitution-container-1.fragment.visible,
+.reveal .substitution-container-2.fragment,
+.reveal .substitution-container-2.fragment.visible {
+    opacity: 1 !important;
+    visibility: inherit !important;
+    z-index: -1;
+    -webkit-transition: all .2s ease;
+    transition: all .2s ease;
+}
+
+.reveal .white-shadow {
+    text-shadow: rgba( 255, 255, 255, 0.3 ) 2px 2px 10px, rgba( 255, 255, 255, 0.3 ) -2px 2px 10px, rgba( 255, 255, 255, 0.3 ) 2px -2px 10px, rgba( 255, 255, 255, 0.3 ) -2px -2px 10px;
+}
+
+.reveal .image-credit-container {
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    position: absolute;
+    top: 0.5em;
+    bottom: 0.5em;
+    left: 0.5em;
+    right: 0.5em;
+}
+
+.reveal .image-credit {
+    font-size: 10px;
+    display: inline-block;
+    color: rgb( 10, 10, 10 );
+    text-shadow: 0 0 0.1em black;
+    background: rgba( 255, 255, 255, 0.6);
+    padding: 0 4px;
+    border-radius: 2px;
+}
+
+.reveal .mb-1 { margin-bottom: 0.5em; }
+.reveal .mb-2 { margin-bottom: 1em; }
+.reveal .mb-3 { margin-bottom: 1.5em; }
+.reveal .mb-4 { margin-bottom: 2em; }
+
+.reveal .good {
+    color: #1caa60;
+}
+
+.reveal .bad {
+    color: #ee2c2d;
+}
+
+.reveal .white-on-black {
+    border-radius: 0.3em;
+    padding: 0 0.3em;
+    color: white;
+    background-color: rgba( 10, 10, 10, 0.6 );
+    text-shadow: 0 0 0.1em black;
+}
