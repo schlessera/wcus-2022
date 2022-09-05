@@ -1,0 +1,386 @@
+<!-- Introduction to the command line -->
+<section id="command-line-interstitial" class="interstitial" data-background-color="#d35400" data-background-image="assets/images/cog-wheels.svg">
+    <h1 style="padding-top: 5%; margin-bottom: 1em;">The Command Line</h1>
+</section>
+<section id="command-line-intro-1">
+    <h2>What is the command line?</h2>
+    <ul>
+        <li class="fragment fade-right" data-fragment-index="1"><p>Text interface to interact with computer</p></li>
+        <li class="fragment fade-right" data-fragment-index="2"><p>Less visual feedback than a GUI <span class="footnote asterisk">*</span></p></li>
+        <li class="fragment fade-right" data-fragment-index="3"><p>More expressive than a GUI</p></li>
+    </ul>
+    <div class="fragment fade-right" data-fragment-index="2"><p class="center footnote">* Graphical User Interface</p></div>
+</section>
+<section id="command-line-intro-2">
+    <h2>Why type when you can point and click?</h2>
+    <div class="row compacter fragment" data-fragment-index="1">
+        <div class="half-left">
+            <h4>GUI - 1 Site</h4>
+        </div>
+        <div class="half-right">
+            <h4>CLI - 1 Site</h4>
+        </div>
+    </div>
+    <div class="row compacter fragment fade-down" data-fragment-index="1">
+        <div class="half-left center">
+            <p>point - click,<br />point - click,<br />point - click</p>
+        </div>
+        <div class="half-right">
+            <pre class="text"><code data-trim data-noescape>
+                $ wp user set-role alain admin<span class="hljs-comment">&crarr;</span>
+                <span class="hljs-output"><span class="hljs-success">Success:</span> Added user (1) to http://wp.test as admin.</span>
+                $ <span class="blinking">_</span>
+            </code></pre>
+        </div>
+    </div>
+    <div class="row compacter fragment" data-fragment-index="2">
+        <div class="half-left">
+            <p class="center">1 minute of work</p>
+        </div>
+        <div class="half-right">
+            <p class="center">1 minute of work</p>
+        </div>
+    </div>
+    <div class="row compacter fragment" data-fragment-index="3">
+        <div class="half-left">
+            <h4>GUI - 10000 Sites</h4>
+        </div>
+        <div class="half-right">
+            <h4>CLI - 10000 Sites</h4>
+        </div>
+    </div>
+    <div class="row compacter fragment fade-down" data-fragment-index="3">
+        <div class="half-left">
+            <p style="font-size: 6px; margin-bottom: 0; padding-bottom: 0;">point - click, point - click, point - click, point - click, point - click, point - click, point - click, point - click, point - click, point - click, point - click, point - click, point - click, point - click, point - click, point - click, point - click, point - click, point - click, point - click, point - click, point - click, point - click, point - click, point - click, point - click, point - click, point - click, point - click, point - click, point - click, point - click, point - click, point - click, point - click, point - click, point - click, point - click, point - click, point - click, point - click, point - click, point - click, point - click, point - click, point - click, point - click, point - click, point - click, point - click, point - click, point - click, point - click, point - click, point - click, point - click, point - click, point - click, point - click, point - click, point - click, point - click, point - click, point - click, point - click, point - click, point - click, point - click, point - click, point - click, point - click, point - click, point - click, point - click, point - click, point - click, point - click, point - click, point - click, point - click, point - click, point - click, point - click, point - click, point - click, point - click, point - click, point - click, point - click, point - click, point - click, point - click, point - click, point - click, point - click, point - click, point - click, point - click, point - click, point - click, point - click, point - click, point - click, point - click, point - click, point - click, point - click, point - click, point - click, point - click, point - click, point - click, point - click, point - click, point - click, point - click, point - click, point - click, point - click, point - click, point - click, point - click, point - click, point - click, point - click, point - click, point - click, point - click, point - click, point - click, point - click, point - click, point - click, point - click, point - click, point - click, point - click, point - click, point - click, point - click, point - click, point - click, point - click, point - click, point - click, point - click, point - click, point - click, point - click, point - click, point - click, point - click, point - click, point - click, point - click, point - click, point - click, point - click, point - click, point - click, point - click, point - click, point - click, point - click, point - click, point - click, point - click, point - click, point - click, point - click, point - click, point - click, point - click, point - click, point - click, point - click, point - click, point - click, point - click, point - click, point - click, point - click, point - click, point - click, point - click, point - click, point - click, point - click, point - click, point - click, point - click, point - click, point - click, point - click, point - click, point - click, point - click, point - click, point - click, point - click, point - click, point - click, point - click, point - click, point - click, point - click, point - click, point - click, point - click, point - click, point - click, point - click, point - click, point - click, point - click, point - click, point - click, point - click, point - click, point - click, point - click, point - click, point - click, point - click, point - click, point - click, point - click, point - click, point - click, point - click, point - click, point - click, point - click, point - click,</p>
+            <p class="center" style="margin-top: 0; padding-top: 0; line-height: 1;">...</p>
+        </div>
+        <div class="half-right">
+            <pre class="text"><code data-trim data-noescape>
+                $ wp site list --field=url | xargs -n1 -I %
+                    wp --url=% user set-role alain admin<span class="hljs-comment">&crarr;</span>
+                <span class="hljs-output"><span class="hljs-success">Success:</span> Added user (1) to http://wp.test as admin.</span>
+                <span class="hljs-output"><span class="hljs-success">Success:</span> Added user (1) to http://1.wp.test as admin.</span>
+                <span class="hljs-output"><span class="hljs-success">Success:</span> Added user (1) to http://2.wp.test as admin.</span>
+                <span class="hljs-output"><span class="hljs-success">Success:</span> Added user (1) to http://3.wp.test as admin.</span>
+                <span class="hljs-output">...</span>
+            </code></pre>
+        </div>
+    </div>
+    <div class="row compacter fragment" data-fragment-index="4">
+        <div class="half-left">
+            <p class="center">6.9 days of work</p>
+        </div>
+        <div class="half-right">
+            <p class="center">5 minutes of work</p>
+        </div>
+    </div>
+</section>
+<section>
+	<h1>Terminology</h1>
+	<ul>
+		<li>
+			<p>CLI - Command-Line Interface <span class="hint link"><a href="https://en.wikipedia.org/wiki/Command-line_interface" target="_blank"><i class="fa fa-external-link" aria-hidden="true"></i></a></span></p>
+			<p>Means of interacting with a computer program where the user (or client) issues commands to the program in the form of successive lines of text (command lines)</p>
+			<p><em>as opposed to:</em> GUI - Graphical User Interface</p>
+		</li>
+		<li>
+			<p>Shell <span class="hint link"><a href="https://en.wikipedia.org/wiki/Shell_(computing)" target="_blank"><i class="fa fa-external-link" aria-hidden="true"></i></a></span></p>
+			<p>User interface to access an operating system's services</p>
+		</li>
+		<li>
+			<p>Terminal <span class="hint link"><a href="https://en.wikipedia.org/wiki/Computer_terminal" target="_blank"><i class="fa fa-external-link" aria-hidden="true"></i></a></span></p>
+			<p>Hardware device for inputting and outputting data from a computer</p>
+			<p>Nowadays, we user "terminal emulators" that provide a software emulation of such a device.</p>
+		</li>
+	</ul>
+</section>
+<section id="prompt">
+    <h2>Prompt</h2>
+    <p>The <em>shell prompt</em> is the entry point where you can type your commands.</p>
+    <pre class="text"><code data-trim data-noescape>
+        $ <span class="blinking">_</span>
+        &nbsp;
+        &nbsp;
+        &nbsp;
+        &nbsp;
+        &nbsp;
+        &nbsp;
+        &nbsp;
+    </code></pre>
+</section>
+<section id="launching">
+    <h2>Launching an application</h2>
+    <p>Just enter the name of the application:</p>
+    <pre class="text"><code data-trim data-noescape>
+        $ &lt;name-of-program&gt;<span class="hljs-comment">&crarr;</span>
+        <span class="hljs-output">&lt;output-of-program&gt;</span>
+        $ <span class="blinking">_</span>
+        &nbsp;
+        &nbsp;
+        &nbsp;
+        &nbsp;
+        &nbsp;
+    </code></pre>
+    <p class="fragment fade-right center">&rArr; magic stuff will happen!</p>
+</section>
+<section id="launching-demo">
+    <h2>DEMO<br />
+    <small>launching an application from the command line</small></h2>
+    <ul class="argument-definitions">
+        <li><span class="argument"><code>ls</code></span><span class="definition"><span class="highlight-letter">l</span>i<span class="highlight-letter">s</span>t directory contents</span> <span class="hint link"><a href="http://man7.org/linux/man-pages/man1/ls.1.html" target="_blank"><i class="fa fa-external-link" aria-hidden="true"></i></a></span></li>
+    </ul>
+</section>
+<section id="arguments-1">
+    <h2>Arguments <small>(1/2)</small></h2>
+    <h3>Syntax</h3>
+    <p class="center"><code>ls [OPTION]... [FILE]...</code> <span class="hint link"><a href="http://man7.org/linux/man-pages/man1/ls.1.html" target="_blank"><i class="fa fa-external-link" aria-hidden="true"></i></a></span></p>
+    <h3>Options <small>(subset)</small></h3>
+    <ul class="argument-definitions">
+        <li><span class="argument"><code>-a, --all</code></span><span class="definition">show hidden entries</span></li>
+        <li><span class="argument"><code>-l</code></span><span class="definition">use a long listing format</span></li>
+    </ul>
+</section>
+<section id="arguments-2">
+    <h2>Arguments <small>(2/2)</small></h2>
+    <h3>Short &amp; Long Options</h3>
+    <p class="center"><code>--all</code> &nbsp; == &nbsp; <code>-a</code></p>
+    <h3>Combined Short Options</h3>
+    <p class="center"><code>-a -l</code> &nbsp; == &nbsp; <code>-al</code></p>
+</section>
+<section id="arguments-demo">
+    <h2>DEMO<br />
+    <small>using arguments to modify application behavior</small></h2>
+    <ul class="argument-definitions">
+        <li><span class="argument"><code>echo [STRING]</code></span><span class="definition"><span class="highlight-letter">echo</span> a string to standard output</span> <span class="hint link"><a href="http://man7.org/linux/man-pages/man1/echo.1.html" target="_blank"><i class="fa fa-external-link" aria-hidden="true"></i></a></span></li>
+    </ul>
+</section>
+<section id="navigation">
+    <h2>Navigation</h2>
+    <ul class="argument-definitions">
+        <li><span class="argument"><code>cd [DIR]</code></span><span class="definition"><span class="highlight-letter">c</span>hange <span class="highlight-letter">d</span>irectory</span> <span class="hint link"><a href="http://man7.org/linux/man-pages/man1/cd.1p.html" target="_blank"><i class="fa fa-external-link" aria-hidden="true"></i></a></span></li>
+        <li><span class="argument"><code>pwd</code></span><span class="definition"><span class="highlight-letter">p</span>rint <span class="highlight-letter">w</span>orking <span class="highlight-letter">d</span>irectory</span> <span class="hint link"><a href="http://man7.org/linux/man-pages/man1/pwd.1.html" target="_blank"><i class="fa fa-external-link" aria-hidden="true"></i></a></span></li>
+    </ul>
+    <h2>Special Directories</h2>
+    <ul class="argument-definitions">
+        <li><span class="argument"><code>.</code></span><span class="definition">current directory</span></li>
+        <li><span class="argument"><code>..</code></span><span class="definition">parent directory</span></li>
+        <li><span class="argument"><code>-</code></span><span class="definition">previous directory</span></li>
+        <li><span class="argument"><code>~</code></span><span class="definition">current user's home directory</span></li>
+    </ul>
+</section>
+<section id="navigation-demo">
+    <h2>DEMO<br />
+    <small>navigating the command line</small></h2>
+</section>
+<section id="autocompletion">
+    <h2>Autocompletion</h2>
+    <ul class="argument-definitions">
+        <li><span class="argument"><code>&rarrb;</code> (Tab key)</span><span class="definition">autocomplete current command/argument <span class="hint link"><a href="http://man7.org/linux/man-pages/man1/cd.1p.html" target="_blank"><i class="fa fa-external-link" aria-hidden="true"></i></a></span></li>
+    </ul>
+    <ul style="margin-top: 2em;">
+        <li>
+            <p>If current text only results in 1 match, that match is used.</p>
+        </li>
+        <li>
+            <p>If current text results in more matches, available options are shown. Reduce set by typing additional characters and try again.</p>
+        </li>
+    </ul>
+</section>
+<section id="autocompletion-demo">
+    <h2>DEMO<br />
+    <small>using autocompletion</small></h2>
+</section>
+<section id="unix-philosophy">
+    <h2>Unix Philosophy <span class="hint link"><a href="https://en.wikipedia.org/wiki/Unix_philosophy" target="_blank"><i class="fa fa-external-link" aria-hidden="true"></i></a></span></h2>
+    <ul>
+        <li class="fragment fade-right">
+            <p>Write programs that do one thing and do it well.</p>
+        </li>
+        <li class="fragment fade-right">
+            <p>Write programs to work together.</p>
+        </li>
+        <li class="fragment fade-right">
+            <p>Write programs to handle text streams, because that is a universal interface.</p>
+        </li>
+    </ul>
+    <p class="fragment fade-right">Combine <strong>small, sharp tools</strong> and the use of a <strong>common underlying format</strong> &mdash; the <strong>line-oriented, plain text file</strong> &mdash; to accomplish larger tasks.</p>
+</section>
+<section id="unix-tools">
+    <h2>Unix Tools</h2>
+    <div class="row">
+        <div class="half-left">
+            <h3>Manipulate Files</h3>
+            <ul class="argument-definitions">
+                <li><span class="argument"><code>cp</code></span><span class="definition"><span class="highlight-letter">c</span>o<span class="highlight-letter">p</span>y files</span> <span class="hint link"><a href="http://man7.org/linux/man-pages/man1/cp.1.html" target="_blank"><i class="fa fa-external-link" aria-hidden="true"></i></a></span></li>
+                <li><span class="argument"><code>mv</code></span><span class="definition"><span class="highlight-letter">m</span>o<span class="highlight-letter">v</span>e (rename) files</span> <span class="hint link"><a href="http://man7.org/linux/man-pages/man1/mv.1.html" target="_blank"><i class="fa fa-external-link" aria-hidden="true"></i></a></span></li>
+                <li><span class="argument"><code>rm</code></span><span class="definition"><span class="highlight-letter">r</span>e<span class="highlight-letter">m</span>ove (delete) files</span> <span class="hint link"><a href="http://man7.org/linux/man-pages/man1/rm.1.html" target="_blank"><i class="fa fa-external-link" aria-hidden="true"></i></a></span></li>
+                <li><span class="argument"><code>mkdir</code></span><span class="definition"><span class="highlight-letter">m</span>a<span class="highlight-letter">k</span>e new <span class="highlight-letter">dir</span>ectory</span> <span class="hint link"><a href="http://man7.org/linux/man-pages/man1/mkdir.1.html" target="_blank"><i class="fa fa-external-link" aria-hidden="true"></i></a></span></li>
+                <li><span class="argument"><code>rmdir</code></span><span class="definition"><span class="highlight-letter">r</span>e<span class="highlight-letter">m</span>ove (delete) <span class="highlight-letter">dir</span>ectory</span> <span class="hint link"><a href="http://man7.org/linux/man-pages/man1/rmdir.1.html" target="_blank"><i class="fa fa-external-link" aria-hidden="true"></i></a></span></li>
+            </ul>
+        </div>
+        <div class="half-right">
+            <h3>Read Contents</h3>
+            <ul class="argument-definitions">
+                <li><span class="argument"><code>cat</code></span><span class="definition">con<span class="highlight-letter">cat</span>enate and print file</span> <span class="hint link"><a href="http://man7.org/linux/man-pages/man1/cat.1.html" target="_blank"><i class="fa fa-external-link" aria-hidden="true"></i></a></span></li>
+                <li><span class="argument"><code>head</code></span><span class="definition">print first part (<span class="highlight-letter">head</span>) of file</span> <span class="hint link"><a href="http://man7.org/linux/man-pages/man1/head.1.html" target="_blank"><i class="fa fa-external-link" aria-hidden="true"></i></a></span></li>
+                <li><span class="argument"><code>tail</code></span><span class="definition">print last part (<span class="highlight-letter">tail</span>) of file</span> <span class="hint link"><a href="http://man7.org/linux/man-pages/man1/tail.1.html" target="_blank"><i class="fa fa-external-link" aria-hidden="true"></i></a></span></li>
+                <li><span class="argument"><code>less</code></span><span class="definition">paginate through file (<span class="highlight-letter">less</span> is opposite of more)</span> <span class="hint link"><a href="http://man7.org/linux/man-pages/man1/less.1.html" target="_blank"><i class="fa fa-external-link" aria-hidden="true"></i></a></span></li>
+            </ul>
+        </div>
+    </div>
+</section>
+<section id="chaining">
+    <h2>Chaining</h2>
+    <ul class="argument-definitions">
+        <li><span class="argument"><code>&lt;cmd1&gt; ; &lt;cmd2&gt;</code></span><span class="definition">run <code>cmd1</code>, then run <code>cmd2</code></span></li>
+        <li><span class="argument"><code>&lt;cmd1&gt; &amp;&amp; &lt;cmd2&gt;</code></span><span class="definition">run <code>cmd1</code>, on success run <code>cmd2</code></span> (logical AND)</li>
+        <li><span class="argument"><code>&lt;cmd1&gt; || &lt;cmd2&gt;</code></span><span class="definition">run <code>cmd1</code>, on failure run <code>cmd2</code></span> (logical OR)</li>
+    </ul>
+    <h3>Example</h3>
+    <pre class="text"><code data-trim data-noescape>
+        ~ $ mkdir dir1 &amp;&amp; cd dir1 &amp;&amp; mkdir dir2 &amp;&amp; cd dir2 &amp;&amp; echo &quot;Success!&quot;<span class="hljs-comment">&crarr;</span>
+        <span class="hljs-output">Success!</span>
+        ~/dir1/dir2 $ <span class="blinking">_</span>
+    </code></pre>
+    <div class="footnote centered">Create folder dir1 and then change into that folder and then create folder dir2 and then change into that folder and then print &quot;Success!&quot;. Abort at the first failure.</div>
+</section>
+<section id="piping-1" class="centered">
+    <h2>Pipelines <small>(1/3)</small></h2>
+    <ul class="argument-definitions" style="margin-bottom: 4em;">
+        <li><span class="argument"><code>wc</code></span><span class="definition"><span class="highlight-letter">w</span>ord <span class="highlight-letter">c</span>ount <span class="hint link"><a href="http://man7.org/linux/man-pages/man1/wc.1.html" target="_blank"><i class="fa fa-external-link" aria-hidden="true"></i></a></span></li>
+    </ul>
+    <div class="pipe-input">
+        <p class="pipe-input-text">Input<br /><code>"one&nbsp;two"</code></p>
+    </div>
+    <div class="pipe-intersection">
+        <p class="pipe-between-text"><i class="fa fa-arrow-right faa-passing faa-fast animated" aria-hidden="true"></i></p>
+    </div>
+    <div class="pipe-container">
+        <img class="pipe" src="assets/images/pipeline.svg" width="100%" height="auto">
+        <p class="pipe-text"><i class="fa fa-arrow-circle-right" aria-hidden="true"></i></p>
+        <p class="pipe-description">Command<br /><code>wc</code></p>
+    </div>
+    <div class="pipe-intersection">
+        <p class="pipe-between-text"><i class="fa fa-arrow-right faa-passing faa-fast animated" aria-hidden="true"></i></p>
+    </div>
+    <div class="pipe-output">
+        <p class="pipe-output-text">Output<br /><code>2</code></p>
+    </div>
+    <div class="footnote" style="margin-top: 3em;"><code>echo "one two" | wc -w</code></div>
+</section>
+<section id="piping-2" class="centered">
+    <h2 style="margin-bottom: 2.5em;">Pipelines <small>(2/3)</small></h2>
+    <div class="pipe-intersection">
+        <p class="pipe-between-text"><i class="fa fa-arrow-right faa-passing faa-fast animated" aria-hidden="true"></i></p>
+    </div>
+    <div class="pipe-container">
+        <img class="pipe" src="assets/images/pipeline.svg" width="100%" height="auto">
+        <p class="pipe-text"><i class="fa fa-arrow-circle-right" aria-hidden="true"></i></p>
+        <p class="pipe-description">Command&nbsp;1</p>
+    </div>
+    <div class="pipe-intersection">
+        <p class="pipe-between-text"><i class="fa fa-arrow-right faa-passing faa-fast animated" aria-hidden="true"></i></p>
+    </div>
+    <div class="pipe-container">
+        <img class="pipe" src="assets/images/pipeline.svg" width="100%" height="auto">
+        <p class="pipe-text"><i class="fa fa-arrow-circle-right" aria-hidden="true"></i></p>
+        <p class="pipe-description">Command&nbsp;2</p>
+    </div>
+    <div class="pipe-intersection">
+        <p class="pipe-between-text"><i class="fa fa-arrow-right faa-passing faa-fast animated" aria-hidden="true"></i></p>
+    </div>
+</section>
+<section id="piping-3">
+    <h2>Pipelines <small>(3/3)</small></h2>
+    <ul class="argument-definitions">
+        <li><span class="argument"><code>&lt;cmd1&gt; | &lt;cmd2&gt;</code></span><span class="definition">use <strong>output</strong> of <code>cmd1</code> as <strong>input</strong> for <code>cmd2</code></span></li>
+    </ul>
+    <h3>Example</h3>
+    <pre class="text"><code data-trim data-noescape>
+        ~ $ ls -1 *.php | wc -l<span class="hljs-comment">&crarr;</span>
+        <span class="hljs-output">42</span>
+        ~ $ <span class="blinking">_</span>
+    </code></pre>
+    <div class="footnote centered">List all of the files with the extension 'php' in single lines and count these lines.</div>
+</section>
+<section id="substitution-1">
+    <h2>Substitution <small>(1/2)</small></h2>
+    <ul class="argument-definitions compact-extended">
+        <li><span class="argument"><span class="substitution-container-2 fragment" data-fragment-index="1"><code>echo Current folder is &lt;XYZ&gt;.</code></span></span><span class="definition">=&gt; <code>Current folder is &lt;XYZ&gt;.</code></span></li>
+        <li><span class="argument"><span class="substitution-container-1 fragment" data-fragment-index="1"><code>pwd</code></span></span><span class="definition">=&gt; <code>/Users/alain</code></span></li>
+        <li class="fragment" data-fragment-index="2"><span class="argument"><span class="substitution-container-2 substitution-outer"><code>echo Current folder is <span class="substitution-container-1 substitution-inner"><code>pwd</code></span>.</code></span></span><span class="definition">=&gt; <code>Current folder is /Users/alain.</code></span></li>
+    </ul>
+</section>
+<section id="substitution-2">
+    <h2>Substitution <small>(2/2)</small></h2>
+    <ul class="argument-definitions">
+        <li><span class="argument"><code>&lt;cmd1&gt; $(&lt;cmd2&gt;)</code></span><span class="definition">use output of <code>cmd2</code> as argument to <code>cmd1</code></span></li>
+    </ul>
+    <h3>Example</h3>
+    <pre class="text"><code data-trim data-noescape>
+        ~ $ echo &quot;Currently in folder $(pwd).&quot;<span class="hljs-comment">&crarr;</span>
+        <span class="hljs-output">Currently in folder /Users/alain.</span>
+        ~ $ <span class="blinking">_</span>
+    </code></pre>
+    <div class="footnote centered">Fetch the current working directory and use it to print a feedback message.</div>
+</section>
+<section id="Composability">
+    <h2>Composability <span class="hint link"><a href="https://en.wikipedia.org/wiki/Composability" target="_blank"><i class="fa fa-external-link" aria-hidden="true"></i></a></span></h2>
+    <ul>
+        <li class="fragment"><p>Mix-and-match commands to get the result you need.</p></li>
+        <li class="fragment"><p>Install additional tools if the provided ones are not sufficient.</p></li>
+        <li class="fragment"><p>Simplify workflows and automate work by building custom scripts.</p></li>
+        <li class="fragment"><p>Mix-and-match custom scripts to build entire automated systems.</p></li>
+    </ul>
+</section>
+<section id="scripting-1">
+    <h2>Scripting <small>(1/2)</small></h2>
+    <div class="row">
+        <div class="half-left">
+            <p><strong>Shell script</strong>: text file with one or more shell commands that are executed in a linear order.</p>
+            <p><strong>Comment</strong>: piece of text that will not be executed and can be used to leave notes.</p>
+            <p><strong>Shebang</strong>: Comment in first line of script to let the shell know about the interpreter to use.</p>
+        </div>
+        <div class="half-right" style="padding-left: 29px; width: 46%;">
+            <p><small>File <code>my-first-script.sh</code>:</small></p>
+            <pre class="bash"><code data-trim data-noescape>
+                #!/bin/sh
+
+                # This is a comment.
+
+                # Run two commands in sequence.
+                echo &quot;Hello World!&quot;
+                echo &quot;How are you doing?&quot;
+            </code></pre>
+        </div>
+    </div>
+</section>
+<section id="scripting-2">
+    <h2>Scripting <small>(2/2)</small></h2>
+    <div class="row">
+        <div class="half-left">
+            <p><small>File <code>my-first-script.sh</code>:</small></p>
+            <pre class="bash"><code data-trim data-noescape>
+                #!/bin/sh
+
+                # This is a comment.
+
+                # Run two commands in sequence.
+                echo &quot;Hello World!&quot;
+                echo &quot;How are you doing?&quot;
+            </code></pre>
+        </div>
+        <div class="half-right">
+            <p>&nbsp;</p>
+            <pre class="text"><code data-trim data-noescape>
+                $ my-first-script.sh<span class="hljs-comment">&crarr;</span>
+                <span class="hljs-output">Hello World!</span>
+                <span class="hljs-output">How are you doing?</span>
+                $ <span class="blinking">_</span>
+                &nbsp;
+                &nbsp;
+                &nbsp;
+            </code></pre>
+        </div>
+    </div>
+</section>
