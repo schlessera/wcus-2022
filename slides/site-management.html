@@ -1,0 +1,184 @@
+<section id="site-management" class="interstitial" data-background-color="#d35400"
+         data-background-image="assets/images/cog-wheels.svg">
+	<h1>Site Management</h1>
+</section>
+
+<!-- From GDoc:
+* Best practices for site management
+	* User and plugin management might be a good example.
+	* WP-CLI allows you to lock down installation with DISALLOW_FILE_MODS but still administer plugins, themes.
+	* --skip-plugins and --skip-themes flags for fixing or administering a broken site
+* Config file options
+	* Pick a couple of items from https://make.wordpress.org/cli/handbook/config/
+	* -- require with a corresponding bootstrap file that sets $_SERVER vars
+* What do you do regularly that you ought to be able to automate?
+	* WordPress updates, backups, migrations
+* Set up a remote site to use WP-CLI, set up @-aliases
+	* Machine with a user for each attendee
+	* SSH in, install and link WP-CLI on a per-user basis
+	* Add aliases locally and then run commands remotely
+	* Set DISALLOW_FILE_EDIT to true by default, get users to flip the value in order to be able to use the plugin editor
+	* Mention this distinction: https://wordpress.slack.com/archives/C02RP4T41/p1522049490000035
+-->
+
+<section id="security">
+  <h1>Enhance your security</h1>
+  <p>Prevent users from using the plugin and theme installers and editors, installing languages, or performing updates to plugins, themes, or WordPress:</p>
+  <p>
+    <code>define( 'DISALLOW_FILE_MODS', true );</code>
+  </p>
+  <p>
+    <em>&nbsp;&nbsp;or</em>
+  </p>
+  <p>
+    <code>wp config set DISALLOW_FILE_MODS true --type=constant --raw</code>
+  </p>
+  <hr style="width:75%">
+  <p>WP-CLI remains unaffected and allows for controlled management:</p>
+  <p>
+    <code>
+      wp core language install it_IT<br>
+      wp plugin update --all<br>
+      wp theme install twentyeighteen
+    </code>
+  </p>
+</section>
+
+<section id="broken">
+  <h1 style="font-size:2.4em">Administer broken or slow sites</h1>
+  <ul>
+    <li>
+      <p>
+        WP-CLI loads before WordPress, allowing control over what loads.
+      </p>
+    </li>
+    <li>
+      <p>Skip loading all or some plugins or themes:</p>
+      <p>
+        <code>--skip-plugins</code>
+      </p>
+      <p>
+        <code>--skip-plugins=a-slow-plugin</code>
+      </p>
+      <p>
+        <code>--skip-themes</code>
+      </p>
+    </li>
+    <li>
+      <p>Load PHP file before running the command:</p>
+      <p>
+        <code>--require=fixer.php</code>
+      </p>
+    </li>
+    <li>
+      <p>Show all PHP errors:</p>
+      <p>
+        <code>--debug</code>
+      </p>
+    </li>
+  </ul>
+</section>
+
+<section id="automation-1">
+  <h1>Thought exercise <small>1/2</small></h1>
+  <blockquote style="padding:0.75em 2em;font-size:2em"><p class="centered">
+    What do you do repeatedly on your site that you ought to be able to automate?
+  </p></blockquote>
+</section>
+
+<section id="automation-2">
+  <h1>Thought exercise <small>2/2</small></h1>
+  <ul>
+    <li>
+      <p>Updates to plugins, themes, and WordPress</p>
+      <p>
+        <code>wp core update --minor</code>
+      </p>
+    </li>
+    <li>
+      <p>Database migrations (in one line!)</p>
+      <p>
+        <code>wp @dev search-replace &lt;oldurl&gt; &lt;newurl&gt; --export | wp @prod import -</code>
+      </p>
+    </li>
+    <li>
+      <p>Installing and setting up WordPress</p>
+      <p>
+        <code>wp core download...<br>
+          wp config create...<br>
+          wp core install...<br>
+          wp import...
+        </code>
+      </p>
+    </li>
+  </ul>
+</section>
+
+<section id="task-1">
+	<h1>Task: Set up remote access</h1>
+	<ol>
+		<li>
+			<p>Log into remote machine via SSH and install WP-CLI</p>
+			<p>Login details: TBD</p>
+			<p><em>WP-CLI has already been installed for you</em></p>
+		</li>
+		<li>
+			<p>Add <code>@dev</code> alias to local machine</p>
+			<p>Default location for user config file: <code>~/.wp-cli/config</code></p>
+		</li>
+		<li>
+			<p>Verify remote access works with <code>wp @dev cli info</code></p>
+			<p>Output should show server OS and paths</p>
+		</li>
+	</ol>
+</section>
+
+<section id="task-2">
+	<h1>Task: Create site setup script</h1>
+	<div class="row">
+		<div class="half-left">
+			<ol>
+				<li>
+					<p>Download WordPress files</p>
+				</li>
+				<li>
+					<p>Create <code>wp-config.php</code> file</p>
+				</li>
+				<li>
+					<p>Install WordPress</p>
+				</li>
+				<li>
+					<p>Install theme</p>
+				</li>
+				<li>
+					<p>Install plugins</p>
+				</li>
+				<li>
+					<p>...</p>
+				</li>
+			</ol>
+		</div>
+		<div class="half-right">
+			<ul>
+				<li>
+					<code>wp core download ...</code>
+				</li>
+				<li>
+					<code>wp config create ...</code>
+				</li>
+				<li>
+					<code>wp core install ...</code>
+				</li>
+				<li>
+					<code>wp theme install ...</code>
+				</li>
+				<li>
+					<code>wp plugin install ...</code>
+				</li>
+				<li>
+				</li>
+			</ul>
+		</div>
+	</div>
+  <p class="fragment center">Stuck? <a href="https://gist.github.com/schlessera/04d347f400ce83c575af9522ec5b3fdc">gist.github.com/schlessera/04d347f400ce83c575af9522ec5b3fdc</a></p>
+</section>

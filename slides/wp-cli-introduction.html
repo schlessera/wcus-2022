@@ -1,0 +1,208 @@
+<section id="introduction" class="interstitial" data-background-color="#d35400"
+         data-background-image="assets/images/cog-wheels.svg">
+	<h1>Introduction</h1>
+</section>
+
+<!-- From GDoc:
+* Briefly cover basic usage (just a few minutes in case of unprepared attendees)
+	* Use on the command line for one-off tasks
+	* Use in shell scripts for repeatable tasks
+* Explain noun based command structure
+	* Makes commands consistent and guessable
+* How to get help
+	* wp help / --help
+	* --prompt
+-->
+
+<!-- Introduction to the WP-CLI -->
+<section id="wp-cli-interstitial" class="interstitial" data-background-color="#d35400" data-background-image="assets/images/cog-wheels.svg">
+    <h1 style="padding-top: 5%; margin-bottom: 1em;">WP-CLI</h1>
+</section>
+<section id="goal">
+    <h2>Goal</h2>
+    <p>WP-CLI is the official command line tool for interacting with and managing your WordPress sites.</p>
+    <ul><li><p><strong>Goal</strong>: Fastest way to do anything with WordPress</p></li></ul>
+</section>
+<section id="installation">
+    <h2>Installation</h2>
+    <p class="centered">Refer to the handbook, which starts with the section <span class="link"><a href="https://make.wordpress.org/cli/handbook/installing/" target="_blank">Installing <i class="fa fa-external-link" aria-hidden="true"></i></a></span>.</p>
+</section>
+<!-- Basic commands -->
+<section id="how-to-get-help">
+	<h1>How to get help</h1>
+	<ul>
+		<li>
+			<p>Built-in user manual</p>
+			<p><code>wp help &lt;command&gt;</code> / <code>wp &lt;command&gt; --help</code></p>
+		</li>
+		<li>
+			<p>Guided interactive mode</p>
+			<p><code>wp &lt;command&gt; --prompt</code></p>
+		</li>
+		<li>
+			<p>Online handbook</p>
+			<p><a href="https://make.wordpress.org/cli/handbook/">make.wordpress.org/cli/handbook</a></p>
+		</li>
+		<li>
+			<p>Online command reference</p>
+			<p><a href="https://developer.wordpress.org/cli/commands/">developer.wordpress.org/cli/commands</a></p>
+		</li>
+	</ul>
+</section>
+<section id="command-structure">
+	<h1>General command structure</h1>
+	<ul>
+		<li>
+			<p>Generally follows the "noun [noun]... verb" format...</p>
+			<p><code>wp user create</code></p>
+			<p><code>wp post meta add</code></p>
+			<p><code>wp plugin install</code></p>
+		</li>
+		<li>
+			<p>...except when it doesn't ¯\_(ツ)_/¯</p>
+			<p><code>wp import</code></p>
+			<p><code>wp scaffold plugin</code></p>
+		</li>
+	</ul>
+</section>
+<section id="how-to-use-1">
+	<h1>How to use <small>1/2</small></h1>
+	<div class="row">
+		<h2>One-off usage</h2>
+		<pre class="text"><code data-trim data-noescape>
+		$ wp option set blogname "WP Production Site"
+		<span class="hljs-string">Success: </span>Updated 'blogname' option.
+		$ wp config delete WP_DEBUG
+		<span class="hljs-string">Success: </span>Deleted the constant 'WP_DEBUG' from the 'wp-config.php' file.
+		</code></pre>
+	</div>
+</section>
+<section id="how-to-use-2">
+	<h1>How to use <small>2/2</small></h1>
+	<div class="row">
+		<h2>For scripting purposes</h2>
+		<pre class="bash"><code data-trim data-noescape>
+		#!/bin/bash
+		abort() {
+			echo "Error - $*"
+			echo "Usage: add-participant &lt;email&gt; &lt;tag&gt;"
+			exit 1
+		}
+		[ $# -lt 1 ] && <span class="hljs-function"><span class="hljs-title">abort</span></span> "First argument &lt;email&gt; is missing."
+		[ $# -lt 2 ] && <span class="hljs-function"><span class="hljs-title">abort</span></span> "Second argument &lt;tag&gt; is missing."
+		# Create new user with email provided as first argument
+		<span class="hljs-variable">ID</span> = $(wp user create $1 $1 --role=participant --porcelain)
+		# Add tag provided in second argument to user
+		wp user term set $ID participant $2
+		</code></pre>
+	</div>
+</section>
+<section id="framework-commands">
+    <h2>Framework commands</h2>
+    <h3>Managing WP-CLI</h3>
+    <ul class="argument-definitions compact">
+        <li><span class="argument"><code>wp cli info</code></span><span class="definition">Print details about the WP-CLI environment</li>
+        <li><span class="argument"><code>wp cli update</code></span><span class="definition">Update WP-CLI to the latest release</span></li>
+    </ul>
+    <h3>Managing WP-CLI Packages</h3>
+    <ul class="argument-definitions compact-extended">
+        <li><span class="argument"><code>wp package list</code></span><span class="definition">List installed WP-CLI packages</span></li>
+        <li><span class="argument"><code>wp package install &lt;package&gt;</code></span><span class="definition">Install a WP-CLI package</span></li>
+        <li><span class="argument"><code>wp package uninstall &lt;package&gt;</code></span><span class="definition">Uninstall a WP-CLI package</span></li>
+        <li><span class="argument"><code>wp package update</code></span><span class="definition">Update all installed WP-CLI packages</span></li>
+    </ul>
+</section>
+<section id="bundled-commands">
+    <h2>Notable Bundled Commands</h2>
+    <ul class="argument-definitions compact">
+        <li><span class="argument"><code>wp core</code></span><span class="definition">Manipulate a WordPress install</li>
+        <li><span class="argument"><code>wp db</code></span><span class="definition">Perform basic database operations</span></li>
+        <li><span class="argument"><code>wp plugin</code></span><span class="definition">Manage plugins</span></li>
+        <li><span class="argument"><code>wp theme</code></span><span class="definition">Manage themes</span></li>
+        <li><span class="argument"><code>wp media</code></span><span class="definition">Manage attachments</span></li>
+        <li><span class="argument"><code>wp post</code></span><span class="definition">Manage posts</span></li>
+        <li><span class="argument"><code>wp user</code></span><span class="definition">Manage users</span></li>
+        <li><span class="argument"><code>wp comment</code></span><span class="definition">Manage comments</span></li>
+        <li><span class="argument"><code>wp scaffold</code></span><span class="definition">Generate code for various components</span></li>
+        <li><span class="argument"><code>wp search-replace</code></span><span class="definition">Search/replace strings in the database</span></li>
+        <li>...</li>
+    </ul>
+</section>
+<section id="global-parameters">
+    <h2>Global Parameters</h2>
+    <ul class="argument-definitions compact">
+        <li><span class="argument"><code>--path=&lt;path&gt;</code></span><span class="definition">Path to the WordPress files</li>
+        <li><span class="argument"><code>--skip-plugins[=&lt;plugin&gt;]</code></span><span class="definition">Skip loading all or some plugins</span></li>
+        <li><span class="argument"><code>--prompt[=&lt;assoc&gt;]</code></span><span class="definition">Prompt the user to enter values for the arguments</span></li>
+        <li><span class="argument"><code>--quiet</code></span><span class="definition">Suppress informational messages</span></li>
+        <li><span class="argument"><code>--debug[=&lt;group&gt;]</code></span><span class="definition">Show all PHP errors and verbose bootstrap output</span></li>
+    </ul>
+</section>
+<section id="combining-commands">
+    <h2>Combining Commands</h2>
+    <ul class="argument-definitions">
+        <li><span class="argument"><code>xargs &lt;command&gt;</code></span><span class="definition">Split input into multiple calls to &lt;command&gt;</li>
+    </ul>
+    <h3>Example</h3>
+    <pre class="text"><code data-trim data-noescape>
+        ~ $ wp cap list 'editor' | xargs wp cap add 'author'<span class="hljs-comment">&crarr;</span>
+        <span class="hljs-output"><span class="hljs-success">Success:</span> Added 24 capabilities to 'author' role.</span>
+        ~ $ <span class="blinking">_</span>
+    </code></pre>
+    <div class="footnote centered">List all the capabilities for the role <code>editor</code> and then pass these on to the next command to add these capabilities to the role <code>author</code>.</div>
+</section>
+<section id="use-cases-interstitial" class="interstitial" data-background-color="#d35400" data-background-image="assets/images/cog-wheels.svg">
+    <h1 style="padding-top: 5%; margin-bottom: 1em;">Common Use Cases</h1>
+</section>
+<section id="common-use-cases-1">
+    <h2>Create a new WordPress installation</h2>
+    <div class="row">
+        <pre class="text"><code data-trim data-noescape>
+            Sites $ <mark class="fragment">wp core download</mark> --path=newsite<span class="hljs-comment">&crarr;</span>
+            <span class="hljs-output">Creating directory '/Users/alain/Sites/newsite/'.</span>
+            <span class="hljs-output">Downloading WordPress 4.7.4 (en_US)...</span>
+            <span class="hljs-output">md5 hash verified: eefcac6dcb954183fff27e5998d62b5f</span>
+            <span class="hljs-output"><span class="hljs-success">Success:</span> WordPress downloaded.</span>
+            Sites $ <mark class="fragment">cd newsite</mark><span class="hljs-comment">&crarr;</span>
+            newsite $ <mark class="fragment">wp core config</mark> --dbname=newsite --dbuser=root<span class="hljs-comment">&crarr;</span>
+            <span class="hljs-output"><span class="hljs-success">Success:</span> Generated 'wp-config.php' file.</span>
+            newsite $ <mark class="fragment">wp db create</mark><span class="hljs-comment">&crarr;</span>
+            <span class="hljs-output"><span class="hljs-success">Success:</span> Database created.</span>
+            newsite $ <mark class="fragment">wp core install</mark> --url=newsite.dev --title="New Site"
+                        --admin_user=mr_robot --admin_email=ea@evilcorp.com<span class="hljs-comment">&crarr;</span>
+            <span class="hljs-output">Admin password: bAgvzQlmNsYY</span>
+            <span class="hljs-success">Success:</span> WordPress installed successfully.
+            newsite $ <span class="blinking">_</span>
+        </code></pre>
+    </div>
+</section>
+<section id="common-use-cases-2">
+    <h2>Run all updates</h2>
+    <div class="row">
+        <pre class="text"><code data-trim data-noescape>
+            newsite $ <mark class="fragment">wp core update</mark><span class="hljs-comment">&crarr;</span>
+            <span class="hljs-output">[ ... ]</span>
+            <span class="hljs-output"><span class="hljs-success">Success:</span> WordPress updated successfully.</span>
+            newsite $ <mark class="fragment">wp plugin update</mark> --all<span class="hljs-comment">&crarr;</span>
+            <span class="hljs-output">[ ... ]</span>
+            <span class="hljs-output"><span class="hljs-success">Success:</span> Updated 4 of 4 plugins.</span>
+            newsite $ <mark class="fragment">wp theme update</mark> --all<span class="hljs-comment">&crarr;</span>
+            <span class="hljs-output">[ ... ]</span>
+            <span class="hljs-output"><span class="hljs-success">Success:</span> Updated 1 of 1 themes.</span>
+            newsite $ <span class="blinking">_</span>
+        </code></pre>
+    </div>
+</section>
+<section id="common-use-cases-3">
+    <h2>Regenerate thumbnails</h2>
+    <div class="row">
+        <pre class="text"><code data-trim data-noescape>
+            newsite $ <mark class="fragment">wp media regenerate</mark> --yes<span class="hljs-comment">&crarr;</span>
+            <span class="hljs-output">Found 2 images to regenerate.</span>
+            <span class="hljs-output">1/2 Regenerated thumbnails for "cropped-Banner.png" (ID 15).</span>
+            <span class="hljs-output">2/2 Regenerated thumbnails for "Banner" (ID 14).</span>
+            <span class="hljs-output"><span class="hljs-success">Success:</span> Regenerated 2 of 2 images.</span>
+            newsite $ <span class="blinking">_</span>
+        </code></pre>
+    </div>
+</section>

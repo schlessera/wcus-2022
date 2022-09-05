@@ -1,11 +1,9 @@
+@charset "UTF-8";
+
 @font-face {
     font-family: 'BNCode';
-    src: url('../../fonts/hasklig/hasklig.eot');
-    src: url('../../fonts/hasklig/hasklig.eot?#iefix') format('embedded-opentype'),
-    url('../../fonts/hasklig/hasklig.otf') format('opentype'),
-    url('../../fonts/hasklig/hasklig.woff') format('woff'),
-    url('../../fonts/hasklig/hasklig.ttf') format('truetype'),
-    url('../../fonts/hasklig/hasklig.svg#hasklig') format('svg');
+    src: url('../../fonts/hasklig/hasklig.eot?#iefix') format('embedded-opentype'), url('../../fonts/hasklig/hasklig.otf') format('opentype'),
+    url('../../fonts/hasklig/hasklig.woff') format('woff'), url('../../fonts/hasklig/hasklig.ttf') format('truetype'), url('../../fonts/hasklig/hasklig.svg#hasklig') format('svg');
     font-weight: 400;
     font-style: normal;
 }
@@ -16,8 +14,8 @@
     src: url('../../fonts/texta_black/Texta-Black-webfont.eot?#iefix') format('embedded-opentype'),
     url('../../fonts/texta_black/Texta-Black-webfont.woff2') format('woff2'),
     url('../../fonts/texta_black/Texta-Black-webfont.woff') format('woff'),
-    url('../../fonts/texta_black/Texta-Black-webfont.ttf') format('truetype'),
-    url('../../fonts/texta_black/Texta-Black-webfont.svg#textablack') format('svg');
+    url('../../fonts/texta_black/Texta-Black-webfont.ttf') format('truetype');
+url('../../fonts/texta_black/Texta-Black-webfont.svg#textablack') format('svg');
     font-weight: 900;
     font-style: normal;
 }
@@ -28,8 +26,8 @@
     src: url('../../fonts/texta_blackitalic/Texta-Black-Italic-webfont.eot?#iefix') format('embedded-opentype'),
     url('../../fonts/texta_blackitalic/Texta-Black-Italic-webfont.woff2') format('woff2'),
     url('../../fonts/texta_blackitalic/Texta-Black-Italic-webfont.woff') format('woff'),
-    url('../../fonts/texta_blackitalic/Texta-Black-Italic-webfont.ttf') format('truetype'),
-    url('../../fonts/texta_blackitalic/Texta-Black-Italic-webfont.svg#textablack_italic') format('svg');
+    url('../../fonts/texta_blackitalic/Texta-Black-Italic-webfont.ttf') format('truetype');
+url('../../fonts/texta_blackitalic/Texta-Black-Italic-webfont.svg#textablack_italic') format('svg');
     font-weight: 900;
     font-style: italic;
 }
@@ -40,8 +38,8 @@
     src: url('../../fonts/texta_heavy/Texta-Heavy-webfont.eot?#iefix') format('embedded-opentype'),
     url('../../fonts/texta_heavy/Texta-Heavy-webfont.woff2') format('woff2'),
     url('../../fonts/texta_heavy/Texta-Heavy-webfont.woff') format('woff'),
-    url('../../fonts/texta_heavy/Texta-Heavy-webfont.ttf') format('truetype'),
-    url('../../fonts/texta_heavy/Texta-Heavy-webfont.svg#textaheavy') format('svg');
+    url('../../fonts/texta_heavy/Texta-Heavy-webfont.ttf') format('truetype');
+url('../../fonts/texta_heavy/Texta-Heavy-webfont.svg#textaheavy') format('svg');
     font-weight: 800;
     font-style: normal;
 }
@@ -52,8 +50,8 @@
     src: url('../../fonts/texta_heavyitalic/Texta-Heavy-Italic-webfont.eot?#iefix') format('embedded-opentype'),
     url('../../fonts/texta_heavyitalic/Texta-Heavy-Italic-webfont.woff2') format('woff2'),
     url('../../fonts/texta_heavyitalic/Texta-Heavy-Italic-webfont.woff') format('woff'),
-    url('../../fonts/texta_heavyitalic/Texta-Heavy-Italic-webfont.ttf') format('truetype'),
-    url('../../fonts/texta_heavyitalic/Texta-Heavy-Italic-webfont.svg#textaheavy_italic') format('svg');
+    url('../../fonts/texta_heavyitalic/Texta-Heavy-Italic-webfont.ttf') format('truetype');
+url('../../fonts/texta_heavyitalic/Texta-Heavy-Italic-webfont.svg#textaheavy_italic') format('svg');
     font-weight: 800;
     font-style: italic;
 }
@@ -64,8 +62,8 @@
     src: url('../../fonts/texta_bold/Texta-Bold-webfont.eot?#iefix') format('embedded-opentype'),
     url('../../fonts/texta_bold/Texta-Bold-webfont.woff2') format('woff2'),
     url('../../fonts/texta_bold/Texta-Bold-webfont.woff') format('woff'),
-    url('../../fonts/texta_bold/Texta-Bold-webfont.ttf') format('truetype'),
-    url('../../fonts/texta_bold/Texta-Bold-webfont.svg#textabold') format('svg');
+    url('../../fonts/texta_bold/Texta-Bold-webfont.ttf') format('truetype');
+url('../../fonts/texta_bold/Texta-Bold-webfont.svg#textabold') format('svg');
     font-weight: 700;
     font-style: normal;
 }
@@ -76,8 +74,8 @@
     src: url('../../fonts/texta_bolditalic/Texta-Bold-Italic-webfont.eot?#iefix') format('embedded-opentype'),
     url('../../fonts/texta_bolditalic/Texta-Bold-Italic-webfont.woff2') format('woff2'),
     url('../../fonts/texta_bolditalic/Texta-Bold-Italic-webfont.woff') format('woff'),
-    url('../../fonts/texta_bolditalic/Texta-Bold-Italic-webfont.ttf') format('truetype'),
-    url('../../fonts/texta_bolditalic/Texta-Bold-Italic-webfont.svg#textabold_italic') format('svg');
+    url('../../fonts/texta_bolditalic/Texta-Bold-Italic-webfont.ttf') format('truetype');
+url('../../fonts/texta_bolditalic/Texta-Bold-Italic-webfont.svg#textabold_italic') format('svg');
     font-weight: 700;
     font-style: italic;
 }
@@ -88,8 +86,8 @@
     src: url('../../fonts/texta_medium/Texta-Medium-webfont.eot?#iefix') format('embedded-opentype'),
     url('../../fonts/texta_medium/Texta-Medium-webfont.woff2') format('woff2'),
     url('../../fonts/texta_medium/Texta-Medium-webfont.woff') format('woff'),
-    url('../../fonts/texta_medium/Texta-Medium-webfont.ttf') format('truetype'),
-    url('../../fonts/texta_medium/Texta-Medium-webfont.svg#textamedium') format('svg');
+    url('../../fonts/texta_medium/Texta-Medium-webfont.ttf') format('truetype');
+url('../../fonts/texta_medium/Texta-Medium-webfont.svg#textamedium') format('svg');
     font-weight: 600;
     font-style: normal;
 }
@@ -100,8 +98,8 @@
     src: url('../../fonts/texta_mediumitalic/Texta-Medium-Italic-webfont.eot?#iefix') format('embedded-opentype'),
     url('../../fonts/texta_mediumitalic/Texta-Medium-Italic-webfont.woff2') format('woff2'),
     url('../../fonts/texta_mediumitalic/Texta-Medium-Italic-webfont.woff') format('woff'),
-    url('../../fonts/texta_mediumitalic/Texta-Medium-Italic-webfont.ttf') format('truetype'),
-    url('../../fonts/texta_mediumitalic/Texta-Medium-Italic-webfont.svg#textamedium_italic') format('svg');
+    url('../../fonts/texta_mediumitalic/Texta-Medium-Italic-webfont.ttf') format('truetype');
+url('../../fonts/texta_mediumitalic/Texta-Medium-Italic-webfont.svg#textamedium_italic') format('svg');
     font-weight: 600;
     font-style: italic;
 }
@@ -112,8 +110,8 @@
     src: url('../../fonts/texta_regular/Texta-Regular-webfont.eot?#iefix') format('embedded-opentype'),
     url('../../fonts/texta_regular/Texta-Regular-webfont.woff2') format('woff2'),
     url('../../fonts/texta_regular/Texta-Regular-webfont.woff') format('woff'),
-    url('../../fonts/texta_regular/Texta-Regular-webfont.ttf') format('truetype'),
-    url('../../fonts/texta_regular/Texta-Regular-webfont.svg#textaregular') format('svg');
+    url('../../fonts/texta_regular/Texta-Regular-webfont.ttf') format('truetype');
+url('../../fonts/texta_regular/Texta-Regular-webfont.svg#textaregular') format('svg');
     font-weight: 400;
     font-style: normal;
 }
@@ -124,8 +122,8 @@
     src: url('../../fonts/texta_italic/Texta-Italic-webfont.eot?#iefix') format('embedded-opentype'),
     url('../../fonts/texta_italic/Texta-Italic-webfont.woff2') format('woff2'),
     url('../../fonts/texta_italic/Texta-Italic-webfont.woff') format('woff'),
-    url('../../fonts/texta_italic/Texta-Italic-webfont.ttf') format('truetype'),
-    url('../../fonts/texta_italic/Texta-Italic-webfont.svg#textaitalic') format('svg');
+    url('../../fonts/texta_italic/Texta-Italic-webfont.ttf') format('truetype');
+url('../../fonts/texta_italic/Texta-Italic-webfont.svg#textaitalic') format('svg');
     font-weight: 400;
     font-style: italic;
 }
@@ -136,8 +134,8 @@
     src: url('../../fonts/texta_book/Texta-Book-webfont.eot?#iefix') format('embedded-opentype'),
     url('../../fonts/texta_book/Texta-Book-webfont.woff2') format('woff2'),
     url('../../fonts/texta_book/Texta-Book-webfont.woff') format('woff'),
-    url('../../fonts/texta_book/Texta-Book-webfont.ttf') format('truetype'),
-    url('../../fonts/texta_book/Texta-Book-webfont.svg#textabook') format('svg');
+    url('../../fonts/texta_book/Texta-Book-webfont.ttf') format('truetype');
+url('../../fonts/texta_book/Texta-Book-webfont.svg#textabook') format('svg');
     font-weight: 300;
     font-style: normal;
 }
@@ -148,8 +146,8 @@
     src: url('../../fonts/texta_bookitalic/Texta-Book-Italic-webfont.eot?#iefix') format('embedded-opentype'),
     url('../../fonts/texta_bookitalic/Texta-Book-Italic-webfont.woff2') format('woff2'),
     url('../../fonts/texta_bookitalic/Texta-Book-Italic-webfont.woff') format('woff'),
-    url('../../fonts/texta_bookitalic/Texta-Book-Italic-webfont.ttf') format('truetype'),
-    url('../../fonts/texta_bookitalic/Texta-Book-Italic-webfont.svg#textabook_italic') format('svg');
+    url('../../fonts/texta_bookitalic/Texta-Book-Italic-webfont.ttf') format('truetype');
+url('../../fonts/texta_bookitalic/Texta-Book-Italic-webfont.svg#textabook_italic') format('svg');
     font-weight: 300;
     font-style: italic;
 }
@@ -160,8 +158,8 @@
     src: url('../../fonts/texta_light/Texta-Light-webfont.eot?#iefix') format('embedded-opentype'),
     url('../../fonts/texta_light/Texta-Light-webfont.woff2') format('woff2'),
     url('../../fonts/texta_light/Texta-Light-webfont.woff') format('woff'),
-    url('../../fonts/texta_light/Texta-Light-webfont.ttf') format('truetype'),
-    url('../../fonts/texta_light/Texta-Light-webfont.svg#textalight') format('svg');
+    url('../../fonts/texta_light/Texta-Light-webfont.ttf') format('truetype');
+url('../../fonts/texta_light/Texta-Light-webfont.svg#textalight') format('svg');
     font-weight: 200;
     font-style: normal;
 }
@@ -172,8 +170,8 @@
     src: url('../../fonts/texta_lightitalic/Texta-Light-Italic-webfont.eot?#iefix') format('embedded-opentype'),
     url('../../fonts/texta_lightitalic/Texta-Light-Italic-webfont.woff2') format('woff2'),
     url('../../fonts/texta_lightitalic/Texta-Light-Italic-webfont.woff') format('woff'),
-    url('../../fonts/texta_lightitalic/Texta-Light-Italic-webfont.ttf') format('truetype'),
-    url('../../fonts/texta_lightitalic/Texta-Light-Italic-webfont.svg#textalight_italic') format('svg');
+    url('../../fonts/texta_lightitalic/Texta-Light-Italic-webfont.ttf') format('truetype');
+url('../../fonts/texta_lightitalic/Texta-Light-Italic-webfont.svg#textalight_italic') format('svg');
     font-weight: 200;
     font-style: italic;
 }
@@ -184,8 +182,8 @@
     src: url('../../fonts/texta_thin/Texta-Thin-webfont.eot?#iefix') format('embedded-opentype'),
     url('../../fonts/texta_thin/Texta-Thin-webfont.woff2') format('woff2'),
     url('../../fonts/texta_thin/Texta-Thin-webfont.woff') format('woff'),
-    url('../../fonts/texta_thin/Texta-Thin-webfont.ttf') format('truetype'),
-    url('../../fonts/texta_thin/Texta-Thin-webfont.svg#textathin') format('svg');
+    url('../../fonts/texta_thin/Texta-Thin-webfont.ttf') format('truetype');
+url('../../fonts/texta_thin/Texta-Thin-webfont.svg#textathin') format('svg');
     font-weight: 100;
     font-style: normal;
 }
@@ -196,8 +194,8 @@
     src: url('../../fonts/texta_thinitalic/Texta-Thin-Italic-webfont.eot?#iefix') format('embedded-opentype'),
     url('../../fonts/texta_thinitalic/Texta-Thin-Italic-webfont.woff2') format('woff2'),
     url('../../fonts/texta_thinitalic/Texta-Thin-Italic-webfont.woff') format('woff'),
-    url('../../fonts/texta_thinitalic/Texta-Thin-Italic-webfont.ttf') format('truetype'),
-    url('../../fonts/texta_thinitalic/Texta-Thin-Italic-webfont.svg#textathin_italic') format('svg');
+    url('../../fonts/texta_thinitalic/Texta-Thin-Italic-webfont.ttf') format('truetype');
+url('../../fonts/texta_thinitalic/Texta-Thin-Italic-webfont.svg#textathin_italic') format('svg');
     font-weight: 100;
     font-style: italic;
 }
@@ -281,10 +279,6 @@ body {
     margin-bottom: 0.25em;
 }
 
-.reveal h2 strong {
-    font-weight: 900;
-}
-
 .reveal h3 {
     font-size: 1.55em;
     margin-top: 0.8em;
@@ -302,12 +296,10 @@ body {
     line-height: 1.3;
 }
 
-.reveal ol > li > p,
 .reveal ul > li > p {
     display: inline;
 }
 
-.reveal ol > li > p:after,
 .reveal ul > li > p:after {
     content: "\A";
     white-space: pre;
@@ -397,7 +389,7 @@ body {
     margin: 20px auto;
     text-align: left;
     font-size: 20px;
-    font-family: 'BNCode', monospace !important;
+    font-family: 'BNCode', monospace;
     font-weight: 700;
     line-height: 1.2em;
     word-wrap: break-word;
@@ -405,7 +397,7 @@ body {
 }
 
 .reveal code {
-    font-family: 'BNCode', monospace !important;
+    font-family: 'BNCode', monospace;
     font-weight: 700;
     font-size: 18px;
     vertical-align: 6%;
@@ -499,20 +491,14 @@ body {
  * IMAGES
  *********************************************/
 .reveal section img {
-    margin: 15px auto;
+    margin: 15px 0px;
     background: rgba(255, 255, 255, 0.12);
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.45);
-    display: block;
 }
 
 .reveal section img.plain {
     border: 0;
     box-shadow: none;
-}
-
-.reveal section img.scale-height {
-    width: auto;
-    height: 570px;
 }
 
 .reveal a img {
@@ -593,7 +579,6 @@ body {
     line-height: 1.5;
 }
 
-.reveal ol,
 .reveal ul {
     margin: 0 auto;
     max-width: 100%;
@@ -607,29 +592,8 @@ body {
     display: table;
 }
 
-.reveal ul.somewhat-compact li {
-    padding-left: 2em;
-    padding-right: 2.5em;
-}
-
-.reveal ul.compact li {
-    padding-left: 1em;
-    padding-right: 1.5em;
-}
-
-.reveal ul.compacter li,
-.reveal ul.compact-extended li {
-    padding-left: 0.5em;
-    padding-right: 1em;
-}
-
-.reveal ul.compact-extended-2 li {
-    padding-left: 0;
-    padding-right: 0em;
-}
-
 .reveal ul li p:first-child::before {
-    font-family: 'BNCode', monospaced !important;
+    font-family: 'BNCode';
     content: "::";
     color: rgba(230, 126, 34, 0.75);
     display: inline-block;
@@ -653,34 +617,12 @@ body {
     line-height: 1.3;
 }
 
-.reveal ul.compactest > li {
-    padding-top: 0;
-    padding-bottom: 0;
-    line-height: 0.8;
-}
-
-.reveal p.somewhat-compact {
-    line-height: 1.2;
-}
-
-.reveal p.compact {
-    line-height: 1.1;
-}
-
-.reveal p.compacter {
-    line-height: 1;
-}
-
-.reveal p.compactest {
-    line-height: 0.9;
-}
-
 .reveal code {
-    background-color: #ddd;
-    color: #000;
+    background-color: #222626;
+    color: #ffffff;
     border-radius: 3px;
     display: inline-block;
-    font-family: 'BNCode', monospace !important;
+    font-family: 'BNCode', monospace;
     padding-left: .4em;
     padding-right: .4em;
 }
@@ -691,10 +633,6 @@ body {
     width: 100%;
     border: 1px solid #222626;
     border-radius: 4px;
-}
-
-.reveal pre code {
-    color: #bfc9ca;
 }
 
 .reveal pre::before {
@@ -745,17 +683,14 @@ code::-webkit-scrollbar-thumb {
     border-radius: .2em;
 }
 
-.reveal ol li p,
 .reveal ul li p {
     font-weight: 300;
 }
 
-.reveal ol li p:first-child,
 .reveal ul li p:first-child {
     font-weight: 700;
 }
 
-.reveal ol li p:first-child strong,
 .reveal ul li p:first-child strong {
     font-weight: 900;
 }
@@ -862,17 +797,10 @@ code::-webkit-scrollbar-thumb {
 
 .reveal .interstitial p,
 .reveal .interstitial h1,
-.reveal .interstitial h2,
-.reveal .interstitial h3,
 .reveal .interstitial small {
     line-height: 1.1;
     color: #ffffff !important;
     text-shadow: 2px 0 10px #d35400, -2px 0 10px #d35400, 0 2px 10px #d35400, 0 -2px 10px #d35400;
-}
-
-.reveal .interstitial h1 {
-    padding-top: 5%;
-    padding-bottom: 10%;
 }
 
 .reveal .interstitial h1:nth-of-type(2) {
@@ -946,60 +874,12 @@ code::-webkit-scrollbar-thumb {
     vertical-align: top;
 }
 
-.reveal .push-right-1 .half-left {
-    width: 53%;
-}
-
-.reveal .push-right-1 .half-right {
-    width: 45%;
-}
-
-.reveal .push-right-2 .half-left {
-    width: 57%;
-}
-
-.reveal .push-right-2 .half-right {
-    width: 41%;
-}
-
-.reveal .push-left-1 .half-left {
-    width: 45%;
-}
-
-.reveal .push-left-1 .half-right {
-    width: 53%;
-}
-
-.reveal .push-left-2 .half-left {
-    width: 41%;
-}
-
-.reveal .push-left-2 .half-right {
-    width: 57%;
-}
-
-.reveal .no-scroll code {
-  overflow: hidden;
-}
-
-.reveal .row.somewhat-compact code {
-    font-size: 13px;
-    padding-bottom: 1px;
-    padding-top: 1px;
-}
-
 .reveal .row.compact code {
     font-size: 12px;
-    padding-bottom: 1px;
-    padding-top: 1px;
 }
 
 .reveal .row.compacter code {
     font-size: 11px;
-}
-
-.reveal .row.somewhat-compact p {
-    font-size: 18px;
 }
 
 .reveal .row.compact p {
@@ -1008,10 +888,6 @@ code::-webkit-scrollbar-thumb {
 
 .reveal .row.compacter p {
     font-size: 16px;
-}
-
-.reveal .row.somewhat-compact pre {
-    margin: 12px auto;
 }
 
 .reveal .row.compact pre {
@@ -1126,29 +1002,15 @@ code::-webkit-scrollbar-thumb {
 .reveal .argument-definitions.compact .argument,
 .reveal .argument-definitions.compact .argument code,
 .reveal .argument-definitions.compact-extended .argument,
-.reveal .argument-definitions.compact-extended .argument code,
-.reveal .argument-definitions.compact-extended-2 .argument,
-.reveal .argument-definitions.compact-extended-2 .argument code,
-.reveal .argument-definitions.compactest .argument,
-.reveal .argument-definitions.compactest .argument code {
-    font-size: 60%;
-    vertical-align: top;
+.reveal .argument-definitions.compact-extended .argument code {
+    font-size: 80%;
 }
 
 .reveal .argument-definitions.compact .definition,
-.reveal .argument-definitions.compact .definition code,
 .reveal .argument-definitions.compact-extended .definition,
-.reveal .argument-definitions.compact-extended .definition code,
-.reveal .argument-definitions.compactest .definition,
-.reveal .argument-definitions.compactest .definition code {
-    font-size: 60%;
-    vertical-align: top;
-}
-
-.reveal .argument-definitions.compact-extended-2 .definition,
-.reveal .argument-definitions.compact-extended-2 .definition code {
-    font-size: 50%;
-    vertical-align: top;
+.reveal .argument-definitions.compact .definition code,
+.reveal .argument-definitions.compact-extended .definition code {
+    font-size: 80%;
 }
 
 .reveal .half-left .argument-definitions .argument,
@@ -1156,56 +1018,15 @@ code::-webkit-scrollbar-thumb {
     width: 45px;
     margin-right: 0.5em;
     display: inline-block;
-    font-size: 65%;
-}
-
-.reveal .half-left .argument-definitions code,
-.reveal .half-right .argument-definitions code {
-    padding: 0.25em 0.4em;
-}
-
-.reveal .half-left .argument-definitions .definition,
-.reveal .half-right .argument-definitions .definition {
-    display: inline-block;
-    width: 80px;
-}
-
-.reveal .half-left .argument-definitions.compact-extended .argument,
-.reveal .half-right .argument-definitions.compact-extended .argument {
-    width: 120px;
-    margin-right: 0.3em;
-}
-
-.reveal .half-left .argument-definitions.compact-extended .definition,
-.reveal .half-right .argument-definitions.compact-extended .definition {
-    width: 225px;
-    display: inline-block;
-}
-
-.reveal .half-left .argument-definitions.compact-extended-2 .argument,
-.reveal .half-right .argument-definitions.compact-extended-2 .argument {
-    width: 200px;
-    margin-right: 0;
-}
-
-.reveal .half-left .argument-definitions.compact-extended-2 .definition,
-.reveal .half-right .argument-definitions.compact-extended-2 .definition {
-    width: 191px;
-    display: inline-block;
+    font-size: 60% !important;
 }
 
 .reveal .half-left .argument-definitions .argument code,
 .reveal .half-left .argument-definitions .definition,
 .reveal .half-right .argument-definitions .argument code,
 .reveal .half-right .argument-definitions .definition {
-    margin-bottom: 0.7em;
-}
-
-.reveal .half-left .argument-definitions.compact-extended-2 .argument code,
-.reveal .half-left .argument-definitions.compact-extended-2 .definition,
-.reveal .half-right .argument-definitions.compact-extended-2 .argument code,
-.reveal .half-right .argument-definitions.compact-extended-2 .definition {
-    margin-bottom: 0.4em;
+    font-size: 78% !important;
+    margin-bottom: 0;
 }
 
 .reveal .half-left .argument-definitions li,
@@ -1278,7 +1099,7 @@ code::-webkit-scrollbar-thumb {
 }
 
 .reveal .pipe-description {
-    font-family: 'BNCode', monospace !important;
+    font-family: 'BNCode', monospace;
     font-weight: 600;
     margin: 0;
     padding: 0;
@@ -1301,7 +1122,7 @@ code::-webkit-scrollbar-thumb {
 }
 
 .reveal .pipe-text {
-    font-family: 'BNCode', monospace !important;
+    font-family: 'BNCode', monospace;
     font-size: 50px;
     font-weight: 600;
     color: #000000;
@@ -1367,50 +1188,4 @@ code::-webkit-scrollbar-thumb {
     z-index: -1;
     -webkit-transition: all .2s ease;
     transition: all .2s ease;
-}
-
-.reveal .white-shadow {
-    text-shadow: rgba( 255, 255, 255, 0.3 ) 2px 2px 10px, rgba( 255, 255, 255, 0.3 ) -2px 2px 10px, rgba( 255, 255, 255, 0.3 ) 2px -2px 10px, rgba( 255, 255, 255, 0.3 ) -2px -2px 10px;
-}
-
-.reveal .image-credit-container {
-    display: flex;
-    align-items: flex-end;
-    justify-content: flex-end;
-    position: absolute;
-    top: 0.5em;
-    bottom: 0.5em;
-    left: 0.5em;
-    right: 0.5em;
-}
-
-.reveal .image-credit {
-    font-size: 10px;
-    display: inline-block;
-    color: rgb( 10, 10, 10 );
-    text-shadow: 0 0 0.1em black;
-    background: rgba( 255, 255, 255, 0.6);
-    padding: 0 4px;
-    border-radius: 2px;
-}
-
-.reveal .mb-1 { margin-bottom: 0.5em; }
-.reveal .mb-2 { margin-bottom: 1em; }
-.reveal .mb-3 { margin-bottom: 1.5em; }
-.reveal .mb-4 { margin-bottom: 2em; }
-
-.reveal .good {
-    color: #1caa60;
-}
-
-.reveal .bad {
-    color: #ee2c2d;
-}
-
-.reveal .white-on-black {
-    border-radius: 0.3em;
-    padding: 0 0.3em;
-    color: white;
-    background-color: rgba( 10, 10, 10, 0.6 );
-    text-shadow: 0 0 0.1em black;
 }
